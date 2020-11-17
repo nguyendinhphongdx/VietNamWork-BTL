@@ -1,4 +1,5 @@
 var listAccount = [];
+localStorage.removeItem('userCurrent');
 
 function login() {
     listAccount = getListAccountFromLS();
