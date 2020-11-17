@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/add-user.css">
+    <script>
+        function changeVisible(t) {
+            var icon_cate = document.getElementsByClassName('icon-cate')[0];
+            var x = icon_cate.getAttribute('class').toString();
+            var button = document.getElementById('button');
+            var menu_left = document.getElementsByClassName('Menu-left')[0];
+            var content_right = document.getElementsByClassName('content-right')[0];
+            if (x == 'icon-cate') {
+                menu_left.setAttribute('class', 'Menu-left Menu-left2');
+                content_right.setAttribute('style', 'width:100%');
+                icon_cate.setAttribute('class', 'icon-cate icon-cate2');
+            } else {
+                menu_left.setAttribute('class', 'Menu-left');
+                content_right.setAttribute('style', 'width:82%');
+                icon_cate.setAttribute('class', 'icon-cate');
+            }
+
+        };
+        var cbExpired;
+        var cbDisable;
+        var lbEX;
+        var lbDi;
+
+        function setup() {
+            cbExpired = document.getElementById('iexpired');
+            cbDisable = document.getElementById('idisable');
+            lbEX = document.getElementById('lbex');
+            lbDi = document.getElementById('lbdi');
+            cbExpired.addEventListener('change', changeValueE);
+            cbDisable.addEventListener('change', changeValueD);
+            //console.log(cbExpired.onclick);
+        }
+
+        function changeValueE() {
+            if (cbExpired.getAttribute('value') == 'not') {
+                cbExpired.setAttribute('value', 'checked');
+                lbEX.innerHTML = 'True';
+            } else {
+                cbExpired.setAttribute('value', 'not');
+                lbEX.innerHTML = 'False';
+            }
+            console.log(cbExpired.getAttribute('value'));
+        }
+
+        function changeValueD() {
+            if (cbDisable.getAttribute('value') == 'not') {
+                cbDisable.setAttribute('value', 'checked');
+                lbdi.innerHTML = 'True';
+            } else {
+                cbDisable.setAttribute('value', 'not');
+                lbdi.innerHTML = 'False';
+            }
+            console.log(cbDisable.getAttribute('value'));
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/table-user.css">
+
+</head>
+
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="layout">
+            <div class="Menu-left">
+                <div class="header"> <a href="dashboard.html">DASHBOARD</a></div>
+
+                <div id="button" class="icon-cate" onclick="changeVisible(this)">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="slide-bar">
+                    <li><a href="list-user.html">Danh Sách Tài Khoản</a></li>
+                    <li><a href="add-user.html">Thêm Tài Khoản</a></li>
+                    <address></address>
+                </ul>
+            </div>
+            <div class="content-right">
+                <div class="header">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="assets/images/2.png" alt="">
+                        </div>
+                        <div class="name">
+                            Joe BiDen
+                        </div>
+                        <div class="arrow-dropdow">
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <i class="fa fa-key"></i>
+                                <a href="">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        <div class="title">
+                            Thêm Tài Khoản
+                        </div>
+                        <div class="table-user">
+                            <div class="box-form">
+                                <form action="">
+                                    <div class="row">
+                                        <label for="">ID</label>
+                                        <input type="text" placeholder="ID" disabled="true">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">UserName</label>
+                                        <input type="text" placeholder="UsrerID">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Password</label>
+                                        <input type="password" placeholder="Password">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Email</label>
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Phone</label>
+                                        <input type="text" placeholder="Phone">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">FirstName</label>
+                                        <input type="text" placeholder="FirtName">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">LastName</label>
+                                        <input type="text" placeholder="LastName">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Roles</label>
+                                        <select name="roles" id="">
+                                                <option value="Admin">Admin</option>
+                                                <option value="Admin">Viewer</option>
+                                            </select>
+                                    </div>
+                                    <div class="row" id="expired">
+                                        <label for="">Expired</label>
+                                        <input type="checkbox" name="expired" id="iexpired" value="not">
+                                        <label id="lbex" for="iexpired">False</label>
+                                    </div>
+                                    <div class="row" id="disable">
+                                        <label for="">Disable</label>
+                                        <input type="checkbox" name="disable" id="idisable" value="not">
+                                        <label id="lbdi" for="idisable">False</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="submit" name="" id="" value="Add User">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

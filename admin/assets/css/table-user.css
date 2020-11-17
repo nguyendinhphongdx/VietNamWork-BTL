@@ -1,0 +1,17 @@
+table#list-user {
+    width: 100%;
+}
+
+table#list-user td {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+table#list-user tr:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+table#list-user tr {
+    font-size: 0.9rem;
+}

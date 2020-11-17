@@ -1,0 +1,49 @@
+.box-form {
+    width: 60%;
+    margin: 0px auto;
+    padding-left: 30px;
+}
+
+.row {
+    padding: 5px 0px;
+}
+
+.row label {
+    display: block;
+}
+
+.row input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 205, 205);
+    background-color: aliceblue;
+    outline: none;
+}
+
+.row input:focus {
+    border: 1px solid rgb(144, 87, 219);
+    transition: all 0.25s;
+}
+
+.row input#iexpired,
+input#idisable {
+    width: 15%;
+    margin-top: 5px;
+}
+
+.row[id=expired],
+[id=disable] {
+    display: flex;
+}
+
+.row[id=expired] label,
+[id=disable] label {
+    width: 15%;
+}
+
+.row input[type=submit] {
+    background-color: #6baf31;
+    color: antiquewhite;
+    font-size: 1.1rem;
+}
