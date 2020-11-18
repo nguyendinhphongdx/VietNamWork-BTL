@@ -15,3 +15,8 @@ table#list-user tr:first-child {
 table#list-user tr {
     font-size: 0.9rem;
 }
+table#list-user td#tdImage{
+    width: 170px;
+}table#list-user td#tdImage img{
+    width: 60%;
+}
