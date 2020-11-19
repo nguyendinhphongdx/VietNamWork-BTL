@@ -59,7 +59,6 @@ function addUser() {
 function getListAccountFromLS() {
     var resutl = [];
     resutl = JSON.parse(localStorage.getItem('listAccount'));
-    //console.log(resutl);
     return resutl;
 }
 
