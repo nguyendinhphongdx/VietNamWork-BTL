@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="assets/front-end/font/font-awesome/css/all.css">
     <link rel="stylesheet" href="assets/front-end/css/reponsive.css">
     <script src="assets/front-end/js/tab-menu.js"></script>
+    <script src="assets/front-end/js/show-home.js"></script>
 </head>
 
-<body>
+<body onload="setup()">
     <div class="wrapper">
         <div class="header">
             <div class="tab-menu" style="transform: translateX(-100%); transition-duration: 300ms;">
@@ -59,24 +60,27 @@
                     <li>
                         <div class="notification"><i class="fas fa-bell fa-1x"></i></div>
                     </li>
-                    <li>
-                        <div class="sign-in">
+                    <li id="group-signIn">
+                        <div class="sign-in" onclick="clickSignIn()">
                             <i class="fas fa-user"></i> Sign - In
                             <i class="fas fa-sort-down"></i>
                         </div>
+                        <div class="formSignIn" style="display: none;">
+                            <div class="title-signIn">Người Tìm Viêc Đăng Nhập</div>
+                            <button id="btnLogin">Đăng Nhập</button>
+                            <div class="title-signIn">Người Tìm Viêc Đăng Ký</div>
+                            <button id="btnSignin">Đăng Ký</button>
+                            <p id="forgot">Bạn <a href="">Quên Tài Khoản/ Mật Khẩu ?</a></p>
+                        </div>
                     </li>
-
                 </ul>
-
-
-
             </div>
         </div>
         <div class="navigation">
             <div class="slides">
                 <div class="slider">
                     <div class="picture">
-                        <img src="assets/front-end/images/banner2.jpg" alt="">
+                        <img src="assets/front-end/images/banner2.jpg" alt="" id="banner">
                     </div>
                     <div class="group-search">
                         <div class="title">
@@ -103,79 +107,7 @@
                         Feature Companies
                     </div>
                     <div class="companies">
-                        <ul class="list-companies">
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="company">
-                                    <div class="box-company">
-                                        <div class="picture">
-                                            <img src="assets/front-end/images/VNPT_Logo.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="name">
-                                        <a href="">VNPT cuộc sống đích thực</a>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="list-companies" id="feature-company">
                             <li>
                                 <div class="company">
                                     <div class="box-company">
@@ -196,71 +128,7 @@
                         Feature Jobs
                     </div>
                     <div class="container-jobs">
-                        <ul class="list-jobs">
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="list-jobs" id="list-jobs1">
                             <li>
                                 <div class="row">
                                     <div class="container-row">
@@ -278,71 +146,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul class="list-jobs">
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="container-row">
-                                        <div class="avatar">
-                                            <img src="assets/front-end/images/eurowindow.png" alt="">
-                                        </div>
-                                        <div class="info-job">
-                                            <div class="name">Nhân Viên Kinh Doanh</div>
-                                            <div class="address">Công ty cổ phần BKAV. Tòa Nhà BKAV 48 Dương Đình Nghệ -Yên Hòa - Cầu Giấy - Thành Phố Hà Nội - blalsdsadasdasdsa</div>
-                                        </div>
-                                        <div class="status">
-                                            HOT
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="list-jobs" id="list-jobs2">
                             <li>
                                 <div class="row">
                                     <div class="container-row">
@@ -502,119 +306,7 @@
                             <a href="">
                                 <div class="course">
                                     <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
-                                    </div>
-                                    <div class="name-course">
-                                        Kỹ năng làm việc ở công ty nước ngoài
-                                    </div>
-                                    <div class="author">
-                                        Lê Thu Thủy
-                                    </div>
-                                </div>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="course">
-                                    <div class="course-picture">
-                                        <img src="assets/front-end/images/image_url-1600243138.jpg" alt="">
+                                        <img src="assets/front-end/images/course1.jpg" alt="">
                                     </div>
                                     <div class="name-course">
                                         Kỹ năng làm việc ở công ty nước ngoài

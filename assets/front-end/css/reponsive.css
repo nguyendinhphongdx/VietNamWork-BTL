@@ -32,3 +32,9 @@
         color: rgb(224, 213, 213);
     }
 }
+
+@media only screen and (min-width: 769px) {
+    .tab-menu {
+        display: none;
+    }
+}

@@ -26,7 +26,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 400px;
+    height: 1000px;
     background-color: #171819;
     opacity: 85%;
     z-index: 7;
@@ -119,6 +119,7 @@ body {
 
 .header-right .tools li:nth-child(3) {
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .header-right .tools li:nth-child(3):hover {
@@ -138,6 +139,65 @@ body {
 
 .header-right .tools .sign-in i:last-child {
     margin-left: 10px;
+}
+
+li#group-signIn {
+    position: relative;
+}
+
+.formSignIn {
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    top: 40px;
+    right: 0;
+    z-index: 10;
+    color: #171819;
+    border-radius: 10px;
+    padding: 10px 10px;
+    transition: all 0.5s;
+}
+
+.formSignIn .title-signIn {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.formSignIn button {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.formSignIn button:hover {
+    border: 1px solid #171819;
+    opacity: 80%;
+    transition: all 0.25s;
+}
+
+.formSignIn button#btnLogin {
+    background-color: #0c5d75;
+}
+
+.formSignIn button#btnSignin {
+    background-color: #ce8f42;
+}
+
+P#forgot {
+    padding-top: 5px;
+    font-size: 0.9rem;
+    text-align: right;
+    font-weight: 500;
+}
+
+P#forgot a:hover {
+    color: red;
 }
 
 
@@ -279,14 +339,14 @@ body {
     height: 160px;
     display: flex;
     justify-content: center;
-    padding: 15px 20px;
+    padding: 15px 15px;
     align-content: center;
     flex-wrap: wrap;
 }
 
 .company .box-company .picture img {
+    width: 100%;
     height: 100%;
-    width: auto;
 }
 
 .company .name {

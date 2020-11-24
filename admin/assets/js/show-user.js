@@ -25,7 +25,7 @@ function showListUser(list) {
         } else {
             addRow += '<td><input type="checkbox" name="" id="" disabled = true></td>';
         }
-        addRow += '<td><a href=""><i class="far fa-edit"></i></a></td>' +
+        addRow += '<td><a href="#" onclick="edit(this)" value =' + i + '><i class="far fa-edit"></i></a></td>' +
             ' <td><a href="#" onclick="remove(this)" value=' + i + '><i class="fas fa-trash"></i></a></td>';
     }
     // console.log(tableOrigin + addRow);
@@ -50,5 +50,15 @@ function remove(t) {
     } else {
         console.log(false);
 
+    }
+}
+
+function edit(t) {
+    var index = t.getAttribute('value');
+    if (confirm('xác nhận sửa ' + index)) {
+        localStorage.setItem('UserIdEdit', JSON.stringify(index));
+        window.location = 'edit-user.html';
+    } else {
+        console.log(false);
     }
 }

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../assets/css/dashboard.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome/css/all.css">
     <link rel="stylesheet" href="../assets/css/add-user.css">
-    <script src="../assets/js/edit-user.js"></script>
+    <script src="../assets/js/add-job.js"></script>
+
 </head>
 
 <body onload="setup()">
@@ -55,38 +56,39 @@
                 <div class="content">
                     <div class="container">
                         <div class="title">
-                            Cập Nhật Tài Khoản
+                            Thêm Công Việc
                         </div>
                         <div class="table-user">
                             <div class="box-form">
                                 <form action="" onsubmit="return false">
                                     <div class="row">
-                                        <label for="">FullName</label>
-                                        <input type="text" placeholder="FullName" id="name">
+
+                                        <label for="">Picture</label>
+                                        <input type="file" id="image">
                                     </div>
                                     <div class="row">
-                                        <label for="">UserName</label>
-                                        <input type="text" placeholder="UsrerID" id="username">
+                                        <label for="">Name</label>
+                                        <input type="text" placeholder="Name" id="name">
                                     </div>
                                     <div class="row">
-                                        <label for="">Password</label>
-                                        <input type="password" placeholder="Password" id="password">
+                                        <label for="">COmpany</label>
+                                        <input type="text" placeholder="COmpany" id="company">
                                     </div>
                                     <div class="row">
-                                        <label for="">Email</label>
-                                        <input type="email" placeholder="Email" id="email">
+                                        <label for="">Salary</label>
+                                        <input type="text" placeholder="Salary" id="salary">
                                     </div>
                                     <div class="row">
-                                        <label for="">Phone</label>
-                                        <input type="text" placeholder="Phone" id="phone">
+                                        <label for="">Address</label>
+                                        <input type="text" placeholder="Address" id="address">
                                     </div>
                                     <div class="row" id="disable">
-                                        <label for="">Disable</label>
+                                        <label for="">Status</label>
                                         <input type="checkbox" name="disable" id="idisable" value="not">
-                                        <label id="lbdi" for="idisable">False</label>
+                                        <label id="lbdi" for="idisable">New</label>
                                     </div>
                                     <div class="row">
-                                        <input type="submit" name="" id="" value="Update User" onclick="updateUser()">
+                                        <input type="submit" name="" id="" value="Add Job" onclick="addJob()">
                                     </div>
                                 </form>
                             </div>
