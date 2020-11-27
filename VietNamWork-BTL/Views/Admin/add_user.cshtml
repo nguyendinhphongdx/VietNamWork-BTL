@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "add_user";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+<script src="~/Content/assets/back-end/js/add-user.js"></script>
+<div class="title">
+    Thêm Tài Khoản
+</div>
+<div class="table-user">
+    <div class="box-form">
+        <form action="" onsubmit="return false">
+            <div class="row">
+                <label for="">FullName</label>
+                <input type="text" placeholder="FullName" id="name">
+            </div>
+            <div class="row">
+                <label for="">UserName</label>
+                <input type="text" placeholder="UsrerID" id="username">
+            </div>
+            <div class="row">
+                <label for="">Password</label>
+                <input type="password" placeholder="Password" id="password">
+            </div>
+            <div class="row">
+                <label for="">Email</label>
+                <input type="email" placeholder="Email" id="email">
+            </div>
+            <div class="row">
+                <label for="">Phone</label>
+                <input type="text" placeholder="Phone" id="phone">
+            </div>
+            <div class="row" id="disable">
+                <label for="">Disable</label>
+                <input type="checkbox" name="disable" id="idisable" value="not">
+                <label id="lbdi" for="idisable">False</label>
+            </div>
+            <div class="row">
+                <input type="submit" name="" id="" value="Add User" onclick="addUser()">
+            </div>
+        </form>
+    </div>
+
+</div>
+

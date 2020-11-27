@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "list_company";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+<script src="~/Content/assets/back-end/js/show-company.js"></script>
+<div class="title">
+    Danh Sách Công Ty
+</div>
+<Button>@Html.ActionLink("Thêm Công Ty", "add_company", "Admin")</Button>
+<div class="table-user">
+    <table id="list-user">
+    </table>
+</div>

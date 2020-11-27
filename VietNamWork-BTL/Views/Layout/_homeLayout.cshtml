@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietNamWorks</title>
+    <link href="~/Content/assets/front-end/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/assets/front-end/font/font-awesome/css/all.css">
+    <link rel="stylesheet" href="~/Content/assets/front-end/css/reponsive.css">
+    <script src="~/Content/assets/front-end/js/tab-menu.js"></script>
+    <script src="~/Content/assets/front-end/js/show-home.js"></script>
+</head>
+
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="header">
+            <div class="tab-menu" style="transform: translateX(-100%); transition-duration: 300ms;">
+                <div class="logo">
+                    <img src="~/Content/assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="main-menu">
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Interviews</a></li>
+                        <li><a href="">Companies</a></li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">HR Insider</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-left">
+                <div class="bar" onclick="active_tab_menu()" id="button">
+                    <div class="icon-bar"><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="logo">
+                    <img src="~/Content/assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="main-menu">
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Interviews</a></li>
+                        <li><a href="">Companies</a></li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">HR Insider</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="tools">
+                    <li>For Employee</li>
+                    <li>
+                        <div class="notification"><i class="fas fa-bell fa-1x"></i></div>
+                    </li>
+                    <li id="group-signIn">
+                        <div class="sign-in" onclick="clickSignIn()">
+                            <i class="fas fa-user"></i> <span id="username">Sign In</span>
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <div class="formSignIn" style="display: none;">
+                            <div class="title-signIn">Người Tìm Viêc Đăng Nhập</div>
+                            <button id="btnLogin"><a href="">@Html.ActionLink("Đăng Nhập", "Login", "Custumer")</a></button>
+                            <div class="title-signIn">Người Tìm Viêc Đăng Ký</div>
+                            <button id="btnSignin"><a href="">@Html.ActionLink("Đăng Ký", "Regestry", "Custumer")</a></button>
+                            <p id="forgot">Bạn <a href="">Quên Tài Khoản/ Mật Khẩu ?</a></p>
+                        </div>
+                        <div class="formLogout" style="display: none;">
+                            <div class="title-signIn"> <a href="" class="manage">Quản Lý Tài Khoản</a></div>
+                            <div class="title-signIn"> <a href="" class="logout" onclick="logout()">Đăng Xuất</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                @RenderBody() 
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="~/Content/assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="info-contact">
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Dành Cho Nhà Tuyển Dụng
+                        </div>
+                        <li>
+                            <a href="">Đăng Tin Tuyển Dụng</a>
+                        </li>
+                        <li>
+                            <a href="">Tìm Kiếm Hồ Sơ</a>
+                        </li>
+                        <li>
+                            <a href="">Giải Pháp Talent Solution</a>
+                        </li>
+                    </ul>
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Dành Cho Nhà Tuyển Dụng
+                        </div>
+                        <li>
+                            <a href="">Đăng Tin Tuyển Dụng</a>
+                        </li>
+                        <li>
+                            <a href="">Tìm Kiếm Hồ Sơ</a>
+                        </li>
+                        <li>
+                            <a href="">Giải Pháp Talent Solution</a>
+                        </li>
+                    </ul>
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Việc Làm Theo Khu Vực
+                        </div>
+                        <li>
+                            <a href="">Hà Nội</a>
+                        </li>
+                        <li>
+                            <a href="">Hải Phòng</a>
+                        </li>
+                        <li>
+                            <a href="">Đà Nẵng</a>
+                        </li>
+                        <li>
+                            <a href="">Huế</a>
+                        </li>
+                        <li>
+                            <a href="">TP Hồ Chí Minh</a>
+                        </li>
+                    </ul>
+                    <div class="linked">
+                        <div class="title-link">Ứng dụng cho di động</div>
+                        <div class="linked-container">
+                            <div class="picture-linked">
+                                <a href=""><img src="~/Content/assets/front-end/images/apple.png" alt=""></a>
+                            </div>
+                            <div class="picture-linked">
+                                <a href=""><img src="~/Content/assets/front-end/images/android.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <div class="author">
+                    Design by (Nguyễn Đình Phong) - phongnguyendx@gmail.com
+                </div>
+                <ul class="cp-right">
+                    <li>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-instagram"></i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-google-plus-square"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-youtube-square"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

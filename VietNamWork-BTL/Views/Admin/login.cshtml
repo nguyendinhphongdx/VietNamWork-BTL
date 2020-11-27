@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="~/Content/assets/back-end/css/main.css">
+    <link rel="stylesheet" href="~/Content/assets/back-end/fonts/font-awesome/css/all.css">
+    <script src="~/Content/assets/back-end/js/setupLogin.js"></script>
+    <script src="~/Content/assets/back-end/js/login.js"></script>
+</head>
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="box">
+            <div class="container">
+                <div class="left">
+                    <img src='~/Content/assets/back-end/images/img-01.png' alt="">
+                </div>
+                <div class="right">
+                    <form action="#" method="post" onsubmit="return false;">
+                        <div class="title">Admin Login</div>
+                        <div class="input">
+                            <div class="row">
+                                <span><i class="fas fa-user"></i></span>
+                                <input type="text" placeholder="UserName" name="username" id="name">
+                            </div>
+                            <div class="row">
+                                <span><i class="fas fa-key"></i></span>
+                                <input type="password" placeholder="Password" name="password" id="password">
+                            </div>
+                            <input type="submit" value="LOGIN" onclick="login()">
+                        </div>
+                        <div class="sub-title">
+                            <p>Quên <a href="dashboard.html"> Tài Khoản / Mật Khẩu ?</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

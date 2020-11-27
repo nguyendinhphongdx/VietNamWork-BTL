@@ -1,0 +1,42 @@
+table#list-user {
+    width: 100%;
+}
+
+table#list-user td {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+table#list-user tr:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+table#list-user tr {
+    font-size: 0.9rem;
+}
+
+table#list-user td {
+    max-width: 170px;
+}
+table#list-user td#titleQ {
+        width: 30%;
+}
+
+table#list-user td#answerQ {
+        width: 45%;
+        height: 50px;
+}
+
+table#list-user td#answerQ textarea {
+    padding: 3px 15px;
+    height: 100%;
+}
+
+table#list-user td#tdImage {
+    width: 170px;
+}
+
+table#list-user td#tdImage img {
+    width: 60%;
+}

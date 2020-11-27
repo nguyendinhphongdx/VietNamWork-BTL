@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "add_company";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+
+<script src="~/Content/assets/back-end/js/add-company.js"></script>
+<div class="title">
+    Thêm Công Ty
+</div>
+<div class="table-user">
+    <div class="box-form">
+        <form action="" onsubmit="return false">
+            <div class="row">
+
+                <label for="">Picture</label>
+                <input type="file" id="image">
+            </div>
+            <div class="row">
+                <label for="">Name Company</label>
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="row">
+                <label for="">Address</label>
+                <input type="text" placeholder="Address" id="address">
+            </div>
+            <div class="row" id="disable">
+                <label for="">Status</label>
+                <input type="checkbox" name="disable" id="idisable" value="not">
+                <label id="lbdi" for="idisable">New</label>
+            </div>
+            <div class="row">
+                <input type="submit" name="" id="" value="Add Company" onclick="addCompany()">
+            </div>
+        </form>
+    </div>
+
+</div>
+

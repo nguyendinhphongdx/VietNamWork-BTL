@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "edit_question";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+    <script src="~/Content/assets/back-end/js/edit-question.js"></script>
+<div class="title">
+    Cập Nhật Câu Hỏi Phỏng Vấn
+</div>
+<div class="table-user">
+    <div class="box-form">
+        <form action="" onsubmit="return false" enctype="multipart/form-data">
+            <div class="row">
+                <label for="">Picture</label>
+                <img src="~/Content/assets/back-end/images/bg.jpg" alt="" style="width:120px" id="imgsrc">
+                <input type="file" id="image">
+            </div>
+            <div class="row">
+                <label for="">Title</label>
+                <input type="text" placeholder="Name" id="title">
+            </div>
+            <div class="row">
+                <label for="">Answer</label>
+                <textarea name="" style="width:100%; padding: 5px 15px;" rows="7" id="answer"></textarea>
+            </div>
+            <div class="row" id="disable">
+                <label for="">Status</label>
+                <input type="checkbox" name="disable" id="idisable" value="not">
+                <label id="lbdi" for="idisable">Favourite</label>
+            </div>
+            <div class="row">
+                <input type="submit" name="" id="" value="Update Question" onclick="UpdateQuestion()">
+            </div>
+        </form>
+    </div>
+
+</div>
+
