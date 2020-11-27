@@ -17,7 +17,7 @@ table#list-user tr {
 }
 
 table#list-user td {
-    max-width: 140px;
+    max-width: 170px;
 }
 
 table#list-user td#tdImage {

@@ -15,7 +15,7 @@ function changeValueD() {
     console.log(cbDisable.getAttribute('value'));
 }
 
-function addJob(){
+function addJob() {
     var image = document.getElementById('image');
     var name = document.getElementById('name').value;
     var company = document.getElementById('company').value;
@@ -23,5 +23,14 @@ function addJob(){
     var address = document.getElementById('address').value;
     var status = document.getElementById('idisable').value;
     //console.log(name+company+salary+address+status);
-   console.log(image.value); 
+    console.log(image.value);
+}
+
+function Job(image, name, company, salary, address, status) {
+    this.image = image;
+    this.name = name;
+    this.company = company;
+    this.salary = salary;
+    this.address = address;
+    this.status = status;
 }

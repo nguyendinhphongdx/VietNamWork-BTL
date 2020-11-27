@@ -189,18 +189,22 @@ li#group-signIn {
 }
 
 .formLogout .title-signIn a::before {
-    font-family: FontAwesome;
-    display: inline-block;
-    padding-right: 6px;
-    vertical-align: middle;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding: 0px 10px 0px 3px;
 }
 
 .formLogout .title-signIn a.manage::before {
-    content: "\f55a";
+    content: "\f013";
 }
 
 .formLogout .title-signIn a.logout::before {
-    content: "\f55a";
+    content: "\f2f5";
+}
+
+.formLogout .title-signIn a:hover {
+    color: rgba(97, 0, 0, 0.685);
+    transition: all 0.25s;
 }
 
 .formSignIn button {

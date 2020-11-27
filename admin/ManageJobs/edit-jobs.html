@@ -56,15 +56,16 @@
                 <div class="content">
                     <div class="container">
                         <div class="title">
-                            Thêm Công Việc
+                            Sửa Công Việc
                         </div>
                         <div class="table-user">
                             <div class="box-form">
-                                <form action="" onsubmit="return false">
+                                <form action="" onsubmit="return false" enctype="multipart/form-data">
                                     <div class="row">
 
                                         <label for="">Picture</label>
-                                        <input type="file" id="image">
+                                        <img src="" alt="" style="width:120px" id="imgsrc">
+                                        <input type="file" id="image" name="images\bkav.png" value="c:/passwords.txt">
                                     </div>
                                     <div class="row">
                                         <label for="">Name</label>
@@ -85,10 +86,10 @@
                                     <div class="row" id="disable">
                                         <label for="">Status</label>
                                         <input type="checkbox" name="disable" id="idisable" value="not">
-                                        <label id="lbdi" for="idisable">New</label>
+                                        <label id="lbdi" for="idisable">Hot</label>
                                     </div>
                                     <div class="row">
-                                        <input type="submit" name="" id="" value="Add Job" onclick="addJob()">
+                                        <input type="submit" name="" id="" value="Update Job" onclick="UpdateJob()">
                                     </div>
                                 </form>
                             </div>

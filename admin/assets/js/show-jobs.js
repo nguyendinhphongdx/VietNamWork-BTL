@@ -25,7 +25,7 @@ function showJobToTable(list) {
             "<td>" + list[i].salary + "</td>" +
             "<td>" + list[i].address + "</td>" +
             "<td>" + list[i].status + "</td>";
-        addRow += '<td><a href="" onclick="edit(this)" value=' + i + '><i class="far fa-edit"></i></a></td>' +
+        addRow += '<td><a href="#" onclick="edit(this)" value=' + i + '><i class="far fa-edit"></i></a></td>' +
             ' <td><a href="#" onclick="remove(this)" value=' + i + '><i class="fas fa-trash"></i></a></td>';
     }
     table.innerHTML = "";
@@ -34,14 +34,9 @@ function showJobToTable(list) {
 
 function edit(t) {
     var index = t.getAttribute('value');
-    if (confirm('xác nhận edit ' + index)) {
-        // listJobs.splice(index, 1);
-        // localStorage.setItem('listJobs', JSON.stringify(listJobs));
-        // window.location = 'list-jobs.html';
-    } else {
-        console.log(false);
+    localStorage.setItem('JobEditId', JSON.stringify(index));
+    window.location = 'edit-jobs.html';
 
-    }
 }
 
 function remove(t) {

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin DashBoard</title>
-    <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
-    <link rel="stylesheet" href="assets/css/add-user.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="../assets/css/add-user.css">
     <script src="assets/js/dashboard.js"></script>
     <script>
         function changeVisible(t) {
@@ -38,7 +38,7 @@
             console.log();
         }
     </script>
-    <link rel="stylesheet" href="assets/css/table-user.css">
+    <link rel="stylesheet" href="../assets/css/table-user.css">
 </head>
 
 <body onload="setup()">
@@ -46,27 +46,27 @@
         <div class="layout">
             <div class="Menu-left">
                 <div class="header">
-                    <a href="dashboard.html">DASHBOARD</a>
+                    <a href="../dashboard.html">DASHBOARD</a>
                 </div>
                 <div id="button" class="icon-cate" onclick="changeVisible(this)">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul class="slide-bar">
                     <li>
-                        <a href="./ManageAdmin/list-user.html">Quản Lý User</a></li>
+                        <a href="../ManageAdmin/list-user.html">Quản Lý User</a></li>
                     <li>
-                        <a href="./ManageJobs/list-jobs.html">Quản Lý Công Việc</a></li>
+                        <a href="../ManageJobs/list-jobs.html">Quản Lý Công Việc</a></li>
                     <li>
-                        <a href="./ManageCompany/list-company.html">Quản Lý Công Ty</a></li>
+                        <a href="../ManageCompany/list-company.html">Quản Lý Công Ty</a></li>
                     <li>
-                        <a href="./ManageQuestion/list-questions.html">Quản Lý Câu Hỏi Phỏng Vấn</a></li>
+                        <a href="../ManageQuestion/list-questions.html">Quản Lý Câu Hỏi Phỏng Vấn</a></li>
                 </ul>
             </div>
             <div class="content-right">
                 <div class="header">
                     <div class="profile">
                         <div class="avatar">
-                            <img src="assets/images/2.png" alt="">
+                            <img src="../assets/images/2.png" alt="">
                         </div>
                         <div class="name" id="userNameCurrent">
                             Joe BiDen
@@ -84,8 +84,15 @@
                 </div>
                 <div class="content">
                     <div class="container">
-                        <h2>Chào Mừng
-                            <span id="NameCurrent"></span> Đến Trang Quản Trị !</h2>
+                        <div class="title">
+                            Danh Câu Hỏi Phỏng Vấn
+                        </div>
+                        <Button><a href="add-user.html">Thêm Câu Hỏi</a></Button>
+                        <div class="table-user">
+                            <table id="list-user">
+
+                            </table>
+                        </div>
                     </div>
 
                 </div>
