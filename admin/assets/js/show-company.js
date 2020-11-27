@@ -21,15 +21,21 @@ function showListCompany(list) {
     for (var i = 0; i < length; i++) {
         addRow += "<tr>" +
             "<td>" + i + "</td>" +
-            "<td id='tdImage'> <img src='/Content/assets/back-end/images/" + list[i].image + "'/> </td>" +
+            "<td id='tdImage'> <img src='../assets/images/" + list[i].image + "'/> </td>" +
             "<td>" + list[i].name + "</td>" +
             "<td>" + list[i].address + "</td>" +
             "<td>" + list[i].status + "</td>";
-        addRow += '<td><a href= ""><i class="far fa-edit"></i></a></td>' +
+        addRow += '<td><a href= "#" onclick="edit(this)" value=' + i + '><i class="far fa-edit"></i></a></td>' +
             ' <td><a href="#" onclick="remove(this)" value=' + i + '><i class="fas fa-trash"></i></a></td>';
     }
     table.innerHTML = "";
     table.innerHTML = tableOrigin + addRow;
+}
+
+function edit(t) {
+    var index = t.getAttribute('value');
+    localStorage.setItem('companyEditId', JSON.stringify(index));
+    window.location = 'edit-company.html';
 }
 
 function remove(t) {

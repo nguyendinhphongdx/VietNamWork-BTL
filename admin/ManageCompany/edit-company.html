@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/dashboard.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome/css/all.css">
     <link rel="stylesheet" href="../assets/css/add-user.css">
-    <script src="../assets/js/edit-job.js"></script>
+    <script src="../assets/js/edit-company.js"></script>
 
 </head>
 
@@ -56,13 +56,13 @@
                 <div class="content">
                     <div class="container">
                         <div class="title">
-                            Thêm Công Việc
+                            Cập Nhật Công Ty
                         </div>
                         <div class="table-user">
                             <div class="box-form">
                                 <form action="" onsubmit="return false">
                                     <div class="row">
-
+                                        <img src="../assets/images/2.png" alt="" style="max-width:100px" id="imgsrc">
                                         <label for="">Picture</label>
                                         <input type="file" id="image">
                                     </div>
@@ -71,24 +71,16 @@
                                         <input type="text" placeholder="Name" id="name">
                                     </div>
                                     <div class="row">
-                                        <label for="">COmpany</label>
-                                        <input type="text" placeholder="COmpany" id="company">
-                                    </div>
-                                    <div class="row">
-                                        <label for="">Salary</label>
-                                        <input type="text" placeholder="Salary" id="salary">
-                                    </div>
-                                    <div class="row">
                                         <label for="">Address</label>
                                         <input type="text" placeholder="Address" id="address">
                                     </div>
                                     <div class="row" id="disable">
                                         <label for="">Status</label>
                                         <input type="checkbox" name="disable" id="idisable" value="not">
-                                        <label id="lbdi" for="idisable">New</label>
+                                        <label id="lbdi" for="idisable">Still</label>
                                     </div>
                                     <div class="row">
-                                        <input type="submit" name="" id="" value="Add Job" onclick="addJob()">
+                                        <input type="submit" name="" id="" value="Update Company" onclick="UpdateCompany()">
                                     </div>
                                 </form>
                             </div>
