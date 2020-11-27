@@ -20,6 +20,20 @@ table#list-user td {
     max-width: 170px;
 }
 
+table#list-user td#titleQ {
+    width: 30%;
+}
+
+table#list-user td#answerQ {
+    width: 50%;
+    height: 50px;
+}
+
+table#list-user td#answerQ textarea {
+    padding: 3px 15px;
+    height: 100%;
+}
+
 table#list-user td#tdImage {
     width: 170px;
 }

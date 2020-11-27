@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="../assets/css/add-user.css">
+    <script src="../assets/js/edit-question.js"></script>
+
+</head>
+
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="layout">
+            <div class="Menu-left">
+                <div class="header">
+                    <a href="../dashboard.html">DASHBOARD</a>
+                </div>
+                <div id="button" class="icon-cate" onclick="changeVisible(this)">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="slide-bar">
+                    <li>
+                        <a href="list-user.html">Quản Lý User</a></li>
+                    <li>
+                        <a href="">Quản Lý Công Việc</a></li>
+                    <li>
+                        <a href="">Quản Lý Công Ty</a></li>
+                    <li>
+                        <a href="">Quản Lý Câu Hỏi Phỏng Vấn</a></li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <div class="header">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="../assets/images/2.png" alt="">
+                        </div>
+                        <div class="name">
+                            Joe BiDen
+                        </div>
+                        <div class="arrow-dropdow">
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <i class="fa fa-key"></i>
+                                <a href="">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        <div class="title">
+                            Cập Nhật Câu Hỏi Phỏng Vấn
+                        </div>
+                        <div class="table-user">
+                            <div class="box-form">
+                                <form action="" onsubmit="return false" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <label for="">Picture</label>
+                                        <img src="../assets/images/bg.jpg" alt="" style="width:120px" id="imgsrc">
+                                        <input type="file" id="image">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Title</label>
+                                        <input type="text" placeholder="Name" id="title">
+                                    </div>
+                                    <div class="row">
+                                        <label for="">Answer</label>
+                                        <textarea name="" style="width:100%; padding: 5px 15px;" rows="7" id="answer"></textarea>
+                                    </div>
+                                    <div class="row" id="disable">
+                                        <label for="">Status</label>
+                                        <input type="checkbox" name="disable" id="idisable" value="not">
+                                        <label id="lbdi" for="idisable">Favourite</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="submit" name="" id="" value="Update Question" onclick="UpdateQuestion()">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

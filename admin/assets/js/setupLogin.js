@@ -1,6 +1,7 @@
 var listAccount = [];
 var listJobs = [];
 var listCompany = [];
+var listQuestion = [];
 
 function setup() {
     listAccount.push(new User('Nguyễn Đình Phong', 'dinhphong', '123', 'phongnguyendx@gmail.com', '039403920', false));
@@ -17,6 +18,10 @@ function setup() {
     listCompany.push(new Company('bkav.png', 'VINGROUP', 'Hà Nội', 'still'));
     listCompany.push(new Company('bkav.png', 'SYMPHONY', 'Hà Nội', 'still'));
     localStorage.setItem('listCompany', JSON.stringify(listCompany));
+    listQuestion.push(new Question('bkav.png', 'Giới thiệu sơ lược về bản thân bạn?(Could you briefly Introduce yourself?)', 'text1', 'favourite'));
+    listQuestion.push(new Question('bkav.png', 'Bạn có thể mô tả sơ lược về những công việc bạn đã làm? Nhiệm vụ chính ở công việc gần đây nhất của bạn là gì? (Can you briefly describe the work you have done? What was the main tasks at your most recent job?)', 'text2', 'favourite'));
+    listQuestion.push(new Question('bkav.png', 'Những thành tựu nào đã đạt được trong công việc khiến bạn tự hào nhất? (What achievements in your job are you most proud of?)', 'text3', 'favourite'));
+    localStorage.setItem('listQuestion', JSON.stringify(listQuestion));
 }
 
 function User(name, username, password, email, phone, disabled) {
@@ -41,5 +46,12 @@ function Company(image, name, address, status) {
     this.image = image;
     this.name = name;
     this.address = address;
+    this.status = status;
+}
+
+function Question(image, title, answer, status) {
+    this.image = image;
+    this.title = title;
+    this.answer = answer;
     this.status = status;
 }

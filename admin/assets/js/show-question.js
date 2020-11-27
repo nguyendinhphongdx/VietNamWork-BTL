@@ -22,14 +22,20 @@ function showlistQuestion(list) {
     for (var i = 0; i < length; i++) {
         addRow += "<tr>" +
             "<td>" + i + "</td>" +
-            "<td>" + list[i].title + "</td>" +
-            "<td>" + list[i].answer + "</td>" +
+            "<td id='titleQ'>" + list[i].title + "</td>" +
+            "<td id='answerQ'> <textarea  style='width:100%'>" + list[i].answer + "</textarea></td>" +
             "<td>" + list[i].status + "</td>";
-        addRow += '<td><a href= ""><i class="far fa-edit"></i></a></td>' +
+        addRow += '<td><a href= "#" onclick="edit(this)" value=' + i + '><i class="far fa-edit"></i></a></td>' +
             ' <td><a href="#" onclick="remove(this)" value=' + i + '><i class="fas fa-trash"></i></a></td>';
     }
     table.innerHTML = "";
     table.innerHTML = tableOrigin + addRow;
+}
+
+function edit(t) {
+    var index = t.getAttribute('value');
+    localStorage.setItem('idQuestionEdit', JSON.stringify(index));
+    window.location = 'edit-question.html';
 }
 
 function remove(t) {
@@ -37,7 +43,7 @@ function remove(t) {
     if (confirm('xác nhận xóa ' + index)) {
         listQuestion.splice(index, 1);
         localStorage.setItem('listQuestion', JSON.stringify(listQuestion));
-        window.location = 'list_question';
+        window.location = 'list-questions.html';
     } else {
         console.log(false);
 
