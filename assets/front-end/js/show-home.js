@@ -2,10 +2,10 @@ var listBanner = [];
 var listFeartureCompany = [];
 var listFeartureJob = [];
 var listCourse = [];
-
+const currentCustumer = JSON.parse(localStorage.getItem('currentCustumer'));
 
 function setup() {
-
+    checkInfoCustumer();
     setBanner();
     setFeatureCompany();
     setFeatureJob();
@@ -143,12 +143,36 @@ function Course(image, name, author) {
     this.author = author;
 }
 
+function checkInfoCustumer() {
+    console.log(currentCustumer);
+    if (currentCustumer == null || currentCustumer.username == '') {
+
+    } else {
+        document.getElementById('username').textContent = currentCustumer.username;
+    }
+}
+
+function logout() {
+    localStorage.removeItem('currentCustumer');
+    window.location = 'index.html';
+}
+
 function clickSignIn() {
     var btnSignIn = document.getElementById('group-signIn');
     var formSign = document.getElementsByClassName('formSignIn')[0];
-    if (formSign.getAttribute('style') == "display: none;") {
-        formSign.setAttribute('style', 'display: block;');
+    var formLogout = document.getElementsByClassName('formLogout')[0];
+    if (currentCustumer == null || currentCustumer.username == '') {
+        if (formSign.getAttribute('style') == "display: none;") {
+            formSign.setAttribute('style', 'display: block;');
+        } else {
+            formSign.setAttribute('style', 'display: none;');
+        }
     } else {
-        formSign.setAttribute('style', 'display: none;');
+        if (formLogout.getAttribute('style') == "display: none;") {
+            formLogout.setAttribute('style', 'display: block;');
+        } else {
+            formLogout.setAttribute('style', 'display: none;');
+        }
     }
+
 }

@@ -49,7 +49,6 @@ function remove(t) {
         window.location = 'list-user.html';
     } else {
         console.log(false);
-
     }
 }
 

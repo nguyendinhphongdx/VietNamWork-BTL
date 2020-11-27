@@ -62,15 +62,19 @@
                     </li>
                     <li id="group-signIn">
                         <div class="sign-in" onclick="clickSignIn()">
-                            <i class="fas fa-user"></i> Sign - In
+                            <i class="fas fa-user"></i> <span id="username">Sign In</span>
                             <i class="fas fa-sort-down"></i>
                         </div>
                         <div class="formSignIn" style="display: none;">
                             <div class="title-signIn">Người Tìm Viêc Đăng Nhập</div>
-                            <button id="btnLogin">Đăng Nhập</button>
+                            <button id="btnLogin"><a href="custumerLogin.html">Đăng Nhập</a></button>
                             <div class="title-signIn">Người Tìm Viêc Đăng Ký</div>
-                            <button id="btnSignin">Đăng Ký</button>
+                            <button id="btnSignin"><a href="custumerRegestry.html">Đăng Ký</a></button>
                             <p id="forgot">Bạn <a href="">Quên Tài Khoản/ Mật Khẩu ?</a></p>
+                        </div>
+                        <div class="formLogout" style="display: none;">
+                            <div class="title-signIn"> <a href="" class="manage">Quản Lý Tài Khoản</a></div>
+                            <div class="title-signIn"> <a href="" class="logout" onclick="logout()">Đăng Xuất</a></div>
                         </div>
                     </li>
                 </ul>

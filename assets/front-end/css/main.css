@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: FontAwesome;
+    src: url(../font/font-awesome/css/all.css);
+}
+
 body {
     font-family: "Open Sans", sans-serif !important;
 }
@@ -128,7 +133,7 @@ body {
 }
 
 .header-right .tools .sign-in {
-    width: 120px;
+    padding: 0px 5px 0px 0px;
     font-size: 0.9rem;
 }
 
@@ -158,11 +163,44 @@ li#group-signIn {
     transition: all 0.5s;
 }
 
-.formSignIn .title-signIn {
+.formLogout {
+    position: absolute;
+    background-color: #ffffff;
+    width: 200px;
+    top: 40px;
+    right: 0;
+    z-index: 10;
+    color: #171819;
+    border-radius: 10px;
+    padding: 10px 10px;
+    transition: all 0.5s;
+}
+
+.formSignIn .title-signIn,
+.formLogout .title-signIn {
     width: 100%;
     text-align: center;
     font-weight: 600;
     padding: 10px 0px;
+}
+
+.formLogout .title-signIn {
+    text-align: left;
+}
+
+.formLogout .title-signIn a::before {
+    font-family: FontAwesome;
+    display: inline-block;
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.formLogout .title-signIn a.manage::before {
+    content: "\f55a";
+}
+
+.formLogout .title-signIn a.logout::before {
+    content: "\f55a";
 }
 
 .formSignIn button {
@@ -187,6 +225,11 @@ li#group-signIn {
 
 .formSignIn button#btnSignin {
     background-color: #ce8f42;
+}
+
+.formSignIn button#btnLogin a,
+.formSignIn button#btnSignin a {
+    color: #fff;
 }
 
 P#forgot {
