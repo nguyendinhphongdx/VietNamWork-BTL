@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "list_job";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+
+<script src="~/Content/assets/back-end/js/show-jobs.js"></script>
+<div class="title">
+    Danh Sách Công Việc
+</div>
+<Button>@Html.ActionLink("Thêm Công Việc", "add_job", "Admin")</Button>
+<div class="table-user">
+    <table id="list-user">
+    </table>
+</div>

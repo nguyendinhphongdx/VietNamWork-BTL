@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Regestry";
+    Layout = "~/Views/Layout/_homeLayout.cshtml";
+}
+<link href="~/Content/assets/front-end/css/LoginAndRegestry.css" rel="stylesheet" />
+<script src="~/Content/assets/front-end/js/custumerRegestry.js"></script>
+<div class="box">
+    <form class="login" onsubmit="return false">
+        <div class="title">Đăng Ký Tài Khoản Mới</div>
+        <div class="row">
+            <label for="">Tên Đăng Nhập : </label>
+            <input type="text" placeholder="Nhập Tên Đăng Nhập" id="name">
+        </div>
+        <div class="row">
+            <label for="">Mật Khẩu : </label>
+            <input type="password" placeholder="Nhập Mật Khẩu" id="password">
+        </div>
+        <div class="row">
+            <label for="">Nhập Lại Mật Khẩu : </label>
+            <input type="password" placeholder="Nhập Lại Mật Khẩu" id="confirm">
+        </div>
+        <input type="submit" value="Đăng Ký" onclick="Regestry()">
+        <p>
+            Bạn đã có tài khoản ? <a href="">@Html.ActionLink("Đăng Nhập.", "Login", "Custumer")</a>
+        </p>
+    </form>
+    <div class="connection">
+        <label for="">Đăng Nhập Bằng Facebook</label>
+        <button class="facebook">Facebook</button>
+        <label for="">Đăng Nhập Bằng Google</label>
+        <button class="google">Google</button>
+    </div>
+</div>
+
+

@@ -1,0 +1,121 @@
+﻿.content {
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 100%;
+    background: rgb(224, 214, 214);
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 60%;
+    text-align: center;
+    background: #eca5a5;
+    display: flex;
+    padding: 30px 0px;
+}
+
+.login {
+    width: 60%;
+}
+
+    .login .title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: rgb(5, 3, 94);
+    }
+
+    .login .row {
+        width: 100%;
+        padding: 10px 0px 10px 15%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+        .login .row label {
+            width: 100%;
+            text-align: left;
+        }
+
+.row input {
+    width: 82%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 0px 0px 15px;
+    margin-top: 5px;
+}
+
+input[type='submit'] {
+    width: 70%;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(#f17979, rgb(172, 135, 233));
+    background: radial-gradient(#f17979, rgb(171, 129, 238));
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+    input[type='submit']:hover {
+        transition: all 0.5s;
+        background: linear-gradient(#d63434, rgb(50, 9, 117));
+        background: radial-gradient(#d63434, rgb(50, 9, 117));
+    }
+
+.connection {
+    width: 40%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+}
+
+    .connection button {
+        width: 100%;
+        margin: 0px auto;
+        height: 50px;
+        font-size: 1.1rem;
+        border: none;
+        color: #fff;
+    }
+
+        .connection button.facebook {
+            background-color: blueviolet;
+        }
+
+        .connection button.google {
+            background-color: #96d10a;
+        }
+
+    .connection label {
+        margin: 10px 0px;
+    }
+
+
+/*Respoonsive Login Custumer*/
+
+@media only screen and (max-width: 768px) {
+    .login {
+        width: 100%;
+    }
+
+    .box {
+        flex-wrap: wrap;
+    }
+
+    .connection {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .connection {
+        display: none;
+    }
+}

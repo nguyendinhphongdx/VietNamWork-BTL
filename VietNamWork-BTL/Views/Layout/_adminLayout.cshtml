@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="~/Content/assets/back-end/css/dashboard.css">
+    <link rel="stylesheet" href="~/Content/assets/back-end/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="~/Content/assets/back-end/css/add-user.css">
+    <script src="~/Content/assets/back-end/js/dashboard.js"></script>
+    <link href="~/Content/assets/back-end/css/responsive.css" rel="stylesheet" />
+    <script>
+        function changeVisible(t) {
+            var icon_cate = document.getElementsByClassName('icon-cate')[0];
+            var x = icon_cate.getAttribute('class').toString();
+            var button = document.getElementById('button');
+            var menu_left = document.getElementsByClassName('Menu-left')[0];
+            var content_right = document.getElementsByClassName('content-right')[0];
+            if (x == 'icon-cate') {
+                menu_left.setAttribute('class', 'Menu-left Menu-left2');
+                content_right.setAttribute('style', 'width:100%');
+                icon_cate.setAttribute('class', 'icon-cate icon-cate2');
+            } else {
+                menu_left.setAttribute('class', 'Menu-left');
+                content_right.setAttribute('style', 'width:82%');
+                icon_cate.setAttribute('class', 'icon-cate');
+            }
+        };
+
+        function remove(t) {
+            if (confirm('xác nhận')) {
+                console.log(true);
+                t.setAttribute('href', 'youtube.com');
+            } else {
+                console.log(false);
+                t.setAttribute('href', '#go');
+            }
+            console.log();
+        }
+    </script>
+    <link rel="stylesheet" href="~/Content/assets/back-end/css/table-user.css">
+</head>
+
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="layout">
+            <div class="Menu-left">
+                <div class="header">
+                   @Html.ActionLink("DASHBOARD","dashboard","Admin")
+                </div>
+                <div id="button" class="icon-cate" onclick="changeVisible(this)">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="slide-bar">
+                    <li>
+                        <a href="">@Html.ActionLink("Quản Lý User", "list_user", "Admin")</a>
+                    </li>
+                    <li>
+                        <a href="">@Html.ActionLink("Quản Lý Công Việc", "list_job", "Admin")</a>
+                    </li>
+                    <li>
+                        <a href="">@Html.ActionLink("Quản Lý Công Ty", "list_company", "Admin")</a>
+                    </li>
+                    <li>
+                        <a href="">@Html.ActionLink("Quản Lý Câu Hỏi Phỏng Vấn", "list_question", "Admin")</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <div class="header">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="~/Content/assets/back-end/images/2.png" alt="">
+                        </div>
+                        <div class="name" id="userNameCurrent">
+                            Joe BiDen
+                        </div>
+                        <div class="arrow-dropdow">
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <i class="fa fa-key"></i>
+                                <a href="">@Html.ActionLink("Đăng xuất", "login", "Admin")</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        @RenderBody()
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

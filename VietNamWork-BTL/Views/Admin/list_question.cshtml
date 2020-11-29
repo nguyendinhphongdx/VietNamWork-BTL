@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "list_question";
+    Layout = "~/Views/Layout/_adminLayout.cshtml";
+}
+<script src="~/Content/assets/back-end/js/show-question.js"></script>
+<div class="title">
+    Danh Sách Câu Hỏi
+</div>
+<Button>@Html.ActionLink("Thêm Câu hỏi", "add_question", "Admin")</Button>
+<div class="table-user">
+    <table id="list-user">
+    </table>
+</div>
+
