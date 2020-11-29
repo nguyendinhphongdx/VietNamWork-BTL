@@ -53,6 +53,10 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.header a:first-child {
+    font-size: 1.3rem;
+}
+
 .Menu-left2 {
     left: -250px;
     position: absolute;

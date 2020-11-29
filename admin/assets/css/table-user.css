@@ -18,6 +18,7 @@ table#list-user tr {
 
 table#list-user td {
     max-width: 170px;
+    overflow-x: scroll;
 }
 
 table#list-user td#titleQ {

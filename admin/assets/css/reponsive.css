@@ -1,0 +1,16 @@
+@media only screen and (max-width:768px) {
+    .container {
+        flex-wrap: wrap;
+        padding: 20px 0px;
+    }
+    .right {
+        width: 100%;
+    }
+    .box {
+        height: auto;
+    }
+    .Menu-left {
+        left: -250px;
+        position: absolute;
+    }
+}
