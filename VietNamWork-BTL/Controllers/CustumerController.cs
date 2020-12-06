@@ -21,5 +21,9 @@ namespace VietNamWork_BTL.Controllers
         {
             return View();
         }
+        public ActionResult Apply()
+        {
+            return View();
+        }
     }
 }

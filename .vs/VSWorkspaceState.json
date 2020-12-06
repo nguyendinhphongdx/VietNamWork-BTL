@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\packages",
     "\\VietNamWork-BTL",
+    "\\VietNamWork-BTL\\Controllers",
     "\\VietNamWork-BTL\\obj",
     "\\VietNamWork-BTL\\obj\\Debug",
+    "\\VietNamWork-BTL\\Upload",
+    "\\VietNamWork-BTL\\Upload\\CVs",
     "\\VietNamWork-BTL\\Views",
-    "\\VietNamWork-BTL\\Views\\Admin"
+    "\\VietNamWork-BTL\\Views\\Admin",
+    "\\VietNamWork-BTL\\Views\\Custumer"
   ],
-  "SelectedNode": "\\VietNamWork-BTL\\Views\\Admin\\add_company.cshtml",
+  "SelectedNode": "\\VietNamWork-BTL\\Views\\Custumer\\Apply.cshtml",
   "PreviewInSolutionExplorer": false
 }

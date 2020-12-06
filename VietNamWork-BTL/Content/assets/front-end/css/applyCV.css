@@ -1,0 +1,76 @@
+#btnApply {
+    padding: 10px 20px;
+}
+
+.fallBack {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 70%;
+    height: 70%;
+    background-color: rgb(236, 241, 241);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    overflow-y: scroll;
+    align-content: space-around;
+}
+
+.popup h2 {
+    width: 100%;
+    color: rgb(44, 61, 61);
+}
+
+.popup .form-data {
+    width: 100%;
+    border: 1px solid;
+    padding: 15px 20px;
+}
+
+.popup .form-data .row {
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.popup .form-data .row label {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+}
+
+.popup .form-data .row input:not(.btn) {
+    padding: 3px 5px;
+    width: 50%;
+}
+
+.popup .form-data .row:last-child {
+    text-align: right;
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    padding: 10px 20px;
+    border: 1px solid;
+    font-size: 0.9rem;
+    color: rgb(235, 226, 226);
+}
+
+#closePopup {
+    background-color: rgb(133, 45, 11);
+    opacity: 0.8;
+}
+
+input[type='submit'] {
+    background-color: gray;
+}
