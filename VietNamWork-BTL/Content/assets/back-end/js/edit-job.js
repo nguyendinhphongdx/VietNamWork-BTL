@@ -41,7 +41,7 @@ function UpdateJob() {
     localStorage.setItem('listJobs', JSON.stringify(listJobs));
     if (confirm('Xác Nhận Cập Nhật !') == true) {
         localStorage.removeItem('JobEditId');
-        window.location = 'Admin/list_job';
+        window.location = 'list_job';
     }
 }
 

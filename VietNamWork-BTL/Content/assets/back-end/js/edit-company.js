@@ -34,7 +34,7 @@ function UpdateCompany() {
     localStorage.setItem('listCompany', JSON.stringify(listCompany));
     if (confirm('Xác Nhận Cập Nhật !') == true) {
         localStorage.removeItem('companyEditId');
-        window.location = 'list-company.html';
+        window.location = 'list-company';
     }
 }
 

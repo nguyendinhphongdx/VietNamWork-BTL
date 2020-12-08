@@ -71,12 +71,32 @@ function setInnerHTML(Obj, list, start, end) {
 }
 
 function showBanner() {
-    var banner = document.getElementById('banner');
-    var index = Math.floor(Math.random() * listBanner.length);
-    console.log("banner " + listBanner[index]);
-    banner.setAttribute("src", "/Content/assets/front-end/images/" + listBanner[index] + ".jpg");
+    var banner = document.getElementsByClassName('banner');
+    //var index = Math.floor(Math.random() * listBanner.length);
+    //console.log("banner " + listBanner[index]);
+   // banner.setAttribute("src", "/Content/assets/front-end/images/" + listBanner[index] + ".jpg");
+    for (var i = 0; i < listBanner.length; i++) {
+        banner[i].setAttribute("src", "/Content/assets/front-end/images/" + listBanner[i] + ".jpg");
+    }
+    cirlceBanner();
+}
+function cirlceBanner() {
+    setInterval(changeBanner, 3000);
 }
 
+function changeBanner() {
+    console.log('changing...');
+    var listRadioBanner = document.getElementsByName('r');
+    for (var i = 0; i < listRadioBanner.length; i++) {
+        console.log(`Radio ${i}:${listRadioBanner[i].checked}`);
+        if (listRadioBanner[i].checked == true && i != listRadioBanner.length - 1) {
+            listRadioBanner[i + 1].checked = true;
+            break;
+        } else if (i == listRadioBanner.length - 1) {
+            listRadioBanner[0].checked = true;
+        }
+    }
+}
 function showFeartureCompany() {
     var ulFearture = document.getElementById('feature-company');
     ulFearture.innerHTML = "";

@@ -9,15 +9,14 @@
         display: flex;
         justify-content: center;
     }
+    .header-left .logo {
+        text-align: center;
+    }
 
-        .header-left .logo {
-            text-align: center;
-        }
-
-        .header-left .bar {
-            display: block;
-            z-index: 7;
-        }
+    .header-left .bar {
+        display: block;
+        z-index: 7;
+    }
 
     .tab-menu .logo {
         width: 80%;
@@ -28,17 +27,24 @@
         margin-top: 20px;
     }
 
-        .tab-menu .menu li {
-            padding: 5px 10px;
-        }
+    .tab-menu .menu li {
+        padding: 5px 10px;
+    }
 
-            .tab-menu .menu li:hover {
-                background-color: rgb(187, 71, 25);
-            }
+    .tab-menu .menu li:hover {
+        background-color: rgb(187, 71, 25);
+    }
 
-            .tab-menu .menu li a {
-                color: rgb(224, 213, 213);
-            }
+    .tab-menu .menu li a {
+        color: rgb(224, 213, 213);
+    }
+    .group-search .title {
+        font-size: 1.5rem;
+    }
+
+    .input-search input {
+        padding: 2px 30px;
+    }
 }
 
 @media only screen and (min-width: 769px) {
