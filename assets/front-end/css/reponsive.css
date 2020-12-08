@@ -31,6 +31,12 @@
     .tab-menu .menu li a {
         color: rgb(224, 213, 213);
     }
+    .group-search .title {
+        font-size: 1.5rem;
+    }
+    .input-search input {
+        padding: 2px 30px;
+    }
 }
 
 @media only screen and (min-width: 769px) {

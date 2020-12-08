@@ -303,7 +303,7 @@ P#forgot a:hover {
     width: 60%;
     display: flex;
     justify-content: center;
-    border: 14px solid rgba(0, 0, 0, 0.35);
+    border: 10px solid rgba(0, 0, 0, 0.35);
     box-sizing: content-box;
     background-color: transparent;
     border-radius: 5px;
@@ -311,7 +311,6 @@ P#forgot a:hover {
 
 .box-search .container-search .input-search {
     width: 100%;
-    height: 40px;
     position: relative;
 }
 
@@ -327,7 +326,7 @@ P#forgot a:hover {
 .input-search input {
     width: 100%;
     height: 100%;
-    padding: 0px 50px;
+    padding: 4px 50px;
     font-size: 1.15rem;
 }
 
