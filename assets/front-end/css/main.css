@@ -257,12 +257,22 @@ P#forgot a:hover {
     width: 100%;
 }
 
+.navigation .slides {
+    overflow: hidden;
+    position: relative;
+}
+
 .navigation .slides .slider {
     position: relative;
+    width: 400%;
+    display: flex;
+    transition: all 1s;
 }
 
 .navigation .slides .slider .picture {
     background-color: black;
+    width: 25%;
+    transition: all 1s;
 }
 
 .navigation .slides .slider .picture img {
@@ -270,21 +280,21 @@ P#forgot a:hover {
     opacity: 80%;
 }
 
-.navigation .slides .slider .group-search {
+.group-search {
     position: absolute;
-    top: 50%;
+    bottom: 27%;
     width: 100%;
     text-align: center;
 }
 
-.slider .group-search .title {
+.group-search .title {
     color: white;
     font-size: 2rem;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.slider .group-search .box-search {
+.group-search .box-search {
     display: flex;
     justify-content: center;
 }
@@ -331,8 +341,53 @@ P#forgot a:hover {
     opacity: 50%;
 }
 
-. .input-search span i {
+.input-search span i {
     font-size: 1.4rem;
+}
+
+.label-controll-banner {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+
+.bar {
+    width: 5%;
+    height: 15px;
+    display: block;
+    border: 1px solid #ccc;
+    margin: 0px 15px;
+    transition: all 0.5s;
+    background-color: #363636;
+    opacity: 0.8;
+    border-radius: 5px;
+    outline: none;
+}
+
+.bar:hover {
+    background-color: #fff;
+}
+
+input[name='r'] {
+    display: none;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -75%;
 }
 
 
