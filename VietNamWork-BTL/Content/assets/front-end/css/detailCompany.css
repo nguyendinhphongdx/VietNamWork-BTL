@@ -1,0 +1,242 @@
+﻿body {
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px hidden;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.notable-employer {
+    margin-top: 0;
+}
+
+.content {
+    margin-top: 0;
+}
+
+.notable-employer .swiper-container {
+    padding: 10px;
+}
+
+.swiper-container .picture {
+    width: 100%;
+}
+
+    .swiper-container .picture img {
+        width: 100%;
+    }
+
+.swiper-container .info-company {
+    margin-top: -100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .swiper-container .info-company .frame {
+        width: 80%;
+        background-color: white;
+        border: 1px solid rgb(179, 170, 170);
+        border-radius: 5px;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+.info-company .frame .logo-company {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+    .info-company .frame .logo-company img {
+        width: 100%;
+    }
+
+.info-company .frame .content-company {
+    width: 80%;
+    padding-left: 50px;
+}
+
+.content-company a:hover {
+    color: red;
+}
+
+.content-company a {
+    text-decoration: none;
+}
+
+.frame .content-company .name-job {
+    font-size: 1.75rem;
+    color: #484848;
+}
+
+.frame .content-company .slogan {
+    text-transform: uppercase;
+    color: #13a7d4;
+}
+
+.frame .content-company .introduction {
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.frame .up-cv {
+    margin-top: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+    .frame .up-cv button {
+        padding: 10px 20px;
+        background-color: #F7941D;
+        border: none;
+        color: #ffffff;
+        border-radius: 3px;
+    }
+
+        .frame .up-cv button:hover {
+            background-color: brown;
+            transition: all 0.25s;
+        }
+
+.list-notable-company {
+    margin-top: 20px;
+}
+
+.menu .menu-second {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.menu-second {
+    list-style: none;
+}
+
+.menu .menu-second li a {
+    color: blue;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+    .menu .menu-second li a:hover {
+        color: red;
+    }
+
+.footer {
+    background-color: black;
+    overflow: auto;
+    width: 100%;
+}
+
+.TXT {
+    width: 70%;
+    float: left;
+}
+
+.txtFooter {
+    float: left;
+    width: 20%;
+    margin-left: 30px;
+    color: blanchedalmond;
+    margin-right: 50px;
+}
+
+.linked {
+    width: 30%;
+    float: left;
+}
+
+.title-link {
+    color: #ffff;
+}
+
+.txtFooter li a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+    .txtFooter li a:hover {
+        color: red;
+    }
+
+.picture-linked {
+    float: left;
+    margin-right: 5px;
+}

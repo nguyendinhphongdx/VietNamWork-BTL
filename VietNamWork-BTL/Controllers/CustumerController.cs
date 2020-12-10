@@ -25,5 +25,18 @@ namespace VietNamWork_BTL.Controllers
         {
             return View();
         }
+        public ActionResult Jobs()
+        {
+            return View();
+        }
+        public ActionResult detailCompany()
+        {
+            return View();
+        }
+        public ActionResult detailJob()
+        {
+            return View();
+        }
+        
     }
 }

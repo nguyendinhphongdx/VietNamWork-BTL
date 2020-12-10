@@ -350,7 +350,7 @@ P#forgot {
     width: 100%;
 }
 
-.bar {
+.lable-bar {
     width: 5%;
     height: 15px;
     display: block;
@@ -363,9 +363,9 @@ P#forgot {
     outline: none;
 }
 
-    .bar:hover {
-        background-color: #fff;
-    }
+.lable-bar:hover, .lable-bar:first-child {
+    background-color: #fff;
+}
 
 input[name='r'] {
     display: none;
@@ -411,7 +411,7 @@ input[name='r'] {
 
 .title {
     text-align: center;
-    font-weight: 300px;
+    font-weight: 300;
     color: #484848;
     font-size: 30px;
     margin-bottom: 10px;
@@ -446,7 +446,6 @@ input[name='r'] {
 
         .company .box-company .picture img {
             width: 100%;
-            height: 100%;
         }
 
 .company .name {

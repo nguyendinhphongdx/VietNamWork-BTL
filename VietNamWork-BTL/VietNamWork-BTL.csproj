@@ -170,10 +170,16 @@
     <Content Include="Content\assets\back-end\js\show-question.js" />
     <Content Include="Content\assets\back-end\js\show-user.js" />
     <Content Include="Content\assets\front-end\css\applyCV.css" />
+    <Content Include="Content\assets\front-end\css\detailCompany.css" />
+    <Content Include="Content\assets\front-end\css\detailJob.css" />
     <Content Include="Content\assets\front-end\images\daesun.png" />
+    <Content Include="Content\assets\front-end\images\doctor.png" />
     <Content Include="Content\assets\front-end\images\hybird.png" />
+    <Content Include="Content\assets\front-end\images\location.png" />
+    <Content Include="Content\assets\front-end\images\mortarboard.png" />
     <Content Include="Content\assets\front-end\images\Nec.png" />
     <Content Include="Content\assets\front-end\images\Neo.png" />
+    <Content Include="Content\assets\front-end\images\plane.png" />
     <Content Include="Content\assets\front-end\images\VinD.png" />
     <Content Include="Content\assets\front-end\js\apply.js" />
     <Content Include="Content\assets\front-end\css\LoginAndRegestry.css" />
@@ -209,6 +215,8 @@
     <Content Include="Content\assets\front-end\images\vnw_logo_white.png" />
     <Content Include="Content\assets\front-end\js\custumerLogin.js" />
     <Content Include="Content\assets\front-end\js\custumerRegestry.js" />
+    <Content Include="Content\assets\front-end\js\detailCompany.js" />
+    <Content Include="Content\assets\front-end\js\detailJob.js" />
     <Content Include="Content\assets\front-end\js\show-home.js" />
     <Content Include="Content\assets\front-end\js\tab-menu.js" />
     <Content Include="Upload\UploadCV.aspx" />
@@ -296,6 +304,10 @@
     <Content Include="Views\Admin\edit_company.cshtml" />
     <Content Include="Views\Admin\edit_question.cshtml" />
     <Content Include="Views\Custumer\Apply.cshtml" />
+    <Content Include="Views\Custumer\Jobs.cshtml" />
+    <Content Include="Views\Custumer\detailCompany.cshtml" />
+    <Content Include="Views\Layout\_homeLayoutWithBanner.cshtml" />
+    <Content Include="Views\Custumer\detailJob.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

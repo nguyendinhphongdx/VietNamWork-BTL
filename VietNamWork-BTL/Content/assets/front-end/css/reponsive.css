@@ -52,3 +52,8 @@
         display: none;
     }
 }
+@media only screen and (max-width: 534px) {
+    .input-search button{
+        display: none;
+    }
+}

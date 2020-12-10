@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "detailJob";
+    Layout = "~/Views/Layout/_homeLayoutWithBanner.cshtml";
+}
+
+<link href="~/Content/assets/front-end/css/detailJob.css" rel="stylesheet" />
+<script src="~/Content/assets/front-end/js/detailJob.js"></script>
+<!-- start -->
+<div class="fallBack">
+    <div class="popup">
+        Bạn đang ứng tuyển cho vị trí
+        <h2> Hanoi - Hot Job for Fresh Graduate - Customer Experience Representative (Không Yêu Cầu Kinh Nghiệm)</h2>
+        <form action="~/Upload/UploadCV.aspx" class="form-data" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <label for="" class="">Tên Của Bạn</label>
+                <input type="text" value="Đình Phong" name="name" required>
+            </div>
+            <div class="row">
+                <label for="">Email nhận phản hồi</label>
+                <input type="text" name="email" required>
+            </div>
+            <div class="row">
+                <label for="">Số điện thoại</label>
+                <input type="text" name="phone" required>
+            </div>
+            <div class="row">
+                <label for="">Hồ Sơ Ứng Tuyển</label>
+                <input type="file" name="fileCV" required>
+            </div>
+            <div class="row">
+                <button class="btn" id="closePopup">Hủy</button>
+                <input type="submit" value="Nộp Đơn" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="notable-employer">
+    <div class="swiper-container">
+        <div class="picture">
+            <img src="/Content/assets/front-end/images/banner.jpg" alt="">
+        </div>
+        <div class="info-company">
+            <div class="frame">
+                <div class="logo-company">
+                    <img src="/Content/assets/front-end/images/bkav.png" alt="" width="70%">
+                </div>
+                <div class="content-company">
+                    <div class="name-job">Marketing Team Leader</div>
+                    <div class="slogan">Tập Đoàn BKAV - nơi chắp cánh ước mơ</div>
+                    <div class="location">Đại điểm làm việc: Hà Nội</div>
+                    <a href="https://"> Đăng nhập để xem lương</a>
+                </div>
+                <div class="up-cv">
+                    <button id="btnApply" >Nộp CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <ul class="menu-second">
+        <li><a href="./ChitietCV.html">THÔNG TIN</a></li>
+        <li><a href="./ChitietCT.html">CÔNG TY</a></li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-6">
+        <h2> CÁC PHÚC LỢI DÀNH CHO BẠN</h2>
+        <div class="benefits">
+            <div class="benefit-row">
+                <img src="/Content/assets/front-end/images/doctor.png" width="30px" />
+                <div>Khám sức khỏe định kì hàng năm</div>
+            </div>
+            <div class="benefit-row">
+                <img src="/Content/assets/front-end/images/mortarboard.png" width="30px" />
+                <div>Cơ hội đào tạo nội bộ và các chương trình public/inhouse</div>
+            </div>
+            <div class="benefit-row">
+                <img src="/Content/assets/front-end/images/plane.png" width="30px" />
+                <div>Du lịch hàng năm</div>
+            </div>
+        </div>
+        <div class="job-description">
+            <h2>MÔ TẢ CÔNG VIỆC</h2>
+            <div id="description">
+
+            </div>
+        </div>
+        <div class="job-requirements">
+            <h2> YÊU CẦU CÔNG VIỆC</h2>
+            <div class="requirement">
+                <h4> BẠN CẦN CÓ:</h4>
+                <div id="Requirement">
+
+                </div>
+            </div>
+        </div>
+        <div class="job-adress">
+            <h2>ĐỊA ĐIỂM LÀM VIỆC</h2>
+            <div class="adress-row">
+                <img src="/Content/assets/front-end/images/location.png" width="30px" />
+                <div> 219 Phố Trung Kính, Yên Hoà, Cầu Giấy, Hà Nội, Việt Nam</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-4"></div>
+
+
+</div>
+

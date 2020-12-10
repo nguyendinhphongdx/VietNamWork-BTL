@@ -10,7 +10,23 @@ function setup() {
     document.getElementById('company').value = JobEdit.company;
     document.getElementById('salary').value = JobEdit.salary;
     document.getElementById('address').value = JobEdit.address;
-    if (JobEdit.status == 'hot') {
+    if (JobEdit.healthy == true) {
+        document.getElementById('healthy').checked = true;
+    } else {
+        document.getElementById('healthy').checked = false;
+    }
+    if (JobEdit.train == true) {
+        document.getElementById('train').checked = true;
+    } else {
+        document.getElementById('train').checked = false;
+    } if (JobEdit.travel == true) {
+        document.getElementById('travel').checked = true;
+    } else {
+        document.getElementById('travel').checked = false;
+    }
+    document.getElementById('description').value = JobEdit.description;
+    document.getElementById('requirement').value = JobEdit.requirement;
+    if (JobEdit.status == 'New') {
         document.getElementById('idisable').checked = true;
     } else {
         document.getElementById('idisable').checked = false;
@@ -18,7 +34,7 @@ function setup() {
 }
 
 function UpdateJob() {
-    var image, name, company, salary, address, status;
+    var image, name, company, salary, address,healthy,train,travel,description,requirement, status;
     if (document.getElementById('image').value == '') {
         console.log('không thay đổi ảnh');
         image = JobEdit.image;
@@ -29,12 +45,17 @@ function UpdateJob() {
     company = document.getElementById('company').value;
     salary = document.getElementById('salary').value;
     address = document.getElementById('address').value;
+    healthy = document.getElementById('healthy').checked;
+    train = document.getElementById('train').checked;
+    travel = document.getElementById('travel').checked;
+    description = document.getElementById('description').value;
+    requirement = document.getElementById('requirement').value;
     if (document.getElementById('idisable').checked == true) {
         status = 'hot';
     } else {
         status = '';
     }
-    var job = new Job(image, name, company, salary, address, status);
+    var job = new Job(image, name, company, salary, address,healthy,train,travel,description,requirement, status);
     console.log(job);
     listJobs[IdJobEdit] = job;
     console.log(listJobs);
@@ -45,11 +66,16 @@ function UpdateJob() {
     }
 }
 
-function Job(image, name, company, salary, address, status) {
+function Job(image, name, company, salary, address, healthy, train, travel, description, requirement, status) {
     this.image = image;
     this.name = name;
     this.company = company;
     this.salary = salary;
     this.address = address;
+    this.healthy = healthy;
+    this.train = train;
+    this.travel = travel;
+    this.description = description;
+    this.requirement = requirement;
     this.status = status;
 }
