@@ -1,0 +1,269 @@
+.header {
+    overflow: hidden;
+    background-color: rgb(88, 118, 153);
+    width: 100%;
+}
+
+.header .bnt {
+    font-size: 5px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin-left: 70px;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.sign-in {
+    overflow: hidden;
+}
+
+.sign-in .txtsign-in {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin-left: 70px;
+}
+
+.search {
+    border-style: hidden;
+    margin-left: 280px;
+    margin-top: 40px;
+    width: 70%;
+}
+
+.ipsearch {
+    float: left;
+    width: 50%;
+}
+
+.txtsearch {
+    padding: 8px 14px;
+}
+
+.btn1 {
+    background-color: orange;
+    padding: 8px 14px;
+}
+
+.search::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px hidden;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.content {
+    border-style: inherit;
+    border-color: rgb(204, 217, 241);
+    padding: 14px;
+    margin-top: 50px;
+    overflow: auto;
+    background-color: rgb(194, 206, 218);
+}
+
+.content1 {
+    border-style: inherit;
+    border-color: rgb(204, 217, 241);
+    padding: 14px;
+    margin-top: 30px;
+    overflow: auto;
+    background-color: rgb(194, 206, 218);
+}
+
+.content2 {
+    border-style: inherit;
+    border-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 50px;
+    overflow: auto;
+    background-color: rgb(245, 219, 224);
+}
+
+.avt {
+    float: left;
+    padding-right: 10px;
+    padding-top: 30px;
+    width: 30%;
+}
+
+.rv {
+    float: left;
+    padding-right: 10px;
+}
+
+.h3 {
+    color: brown;
+}
+
+.a {
+    color: black;
+}
+
+.icon {
+    float: left;
+    padding-right: 20px;
+}
+
+.view {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.bdnotifications {
+    border-style: groove;
+    border-color: rgb(221, 225, 233);
+    padding: 20px;
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.txtnotifications {
+    float: left;
+    margin-left: 30px;
+}
+
+.notifications {
+    padding: 12px;
+    margin-left: 150px;
+    background-color: darkgoldenrod;
+}
+
+.footer {
+    background-color: black;
+    overflow: auto;
+    width: 100%;
+}
+
+.TXT {
+    width: 70%;
+    float: left;
+}
+
+.txtFooter {
+    float: left;
+    width: 23%;
+    margin-left: 5px;
+    color: blanchedalmond;
+    margin-right: 50px;
+}
+
+.tile {
+    font-size: 22px;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+.linked {
+    width: 30%;
+    float: left;
+}
+
+.title-link {
+    color: #ffff;
+    font-size: 2em;
+}
+
+.picture-linked {
+    margin-right: 5px;
+    float: left;
+}
+
+div>h3 {
+    cursor: pointer;
+}

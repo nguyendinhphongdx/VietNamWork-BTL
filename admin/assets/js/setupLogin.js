@@ -8,10 +8,10 @@ function setup() {
     listAccount.push(new User('Lưu Thị Xuyên', 'xuyenluu', '123', 'luuthixuyen@gmail.com', '090593400', false));
     listAccount.push(new User('Kiều Thị Thu Thúy', 'thuthuy', '123', 'kieuthithuthuy@gmail.com', '08987968', false));
     localStorage.setItem('listAccount', JSON.stringify(listAccount));
-    listJobs.push(new Job('bkav.png', 'Automation Tester', 'BKAV', '1500', 'Ha Noi', 'hot'));
-    listJobs.push(new Job('bkav.png', 'Automation Tester1', 'BKAV', '1500', 'Ha Noi', 'hot'));
-    listJobs.push(new Job('bkav.png', 'Automation Tester2', 'BKAV', '1500', 'Ha Noi', 'hot'));
-    listJobs.push(new Job('bkav.png', 'Automation Tester3', 'BKAV', '1500', 'Ha Noi', 'hot'));
+    listJobs.push(new Job('bkav.png', 'Automation Tester', 'BKAV', '1500', 'Ha Noi', true, true, true, 'hot'));
+    listJobs.push(new Job('bkav.png', 'Automation Tester1', 'BKAV', '1500', 'Ha Noi', true, false, true, 'hot'));
+    listJobs.push(new Job('bkav.png', 'Automation Tester2', 'BKAV', '1500', 'Ha Noi', true, true, false, 'hot'));
+    listJobs.push(new Job('bkav.png', 'Automation Tester3', 'BKAV', '1500', 'Ha Noi', true, true, true, 'hot'));
     localStorage.setItem('listJobs', JSON.stringify(listJobs));
     listCompany.push(new Company('bkav.png', 'BKAV', 'Hà Nội', 'still'));
     listCompany.push(new Company('bkav.png', 'VNPT', 'Hà Nội', 'still'));
@@ -33,12 +33,15 @@ function User(name, username, password, email, phone, disabled) {
     this.disabled = disabled;
 }
 
-function Job(image, name, company, salary, address, status) {
+function Job(image, name, company, salary, address, healthy, train, travel, status) {
     this.image = image;
     this.name = name;
     this.company = company;
     this.salary = salary;
     this.address = address;
+    this.healthy = healthy;
+    this.train = train;
+    this.travel = travel;
     this.status = status;
 }
 

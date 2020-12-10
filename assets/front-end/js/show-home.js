@@ -189,11 +189,27 @@ function changeBanner() {
     var listRadioBanner = document.getElementsByName('r');
     for (var i = 0; i < listRadioBanner.length; i++) {
         console.log(`Radio ${i}:${listRadioBanner[i].checked}`);
-        if (listRadioBanner[i].checked == true && i != listRadioBanner.length - 1) {
+        if (listRadioBanner[i].checked == true && i != listRadioBanner.length - 1) { // duyệt 4 radio và set checked cho radio kế
             listRadioBanner[i + 1].checked = true;
+            // console.log(i);
+            changeLabelBanner(i);
             break;
         } else if (i == listRadioBanner.length - 1) {
             listRadioBanner[0].checked = true;
+        }
+    }
+}
+
+function changeLabelBanner(i) {
+    var listLableBanner = document.getElementsByClassName('lable-bar');
+    for (var x = 0; x < listLableBanner.length; x++) {
+        console.log(`x: ${x}  i: ${i}`);
+        if (x == i && x != listLableBanner.length - 1) {
+            listLableBanner[x + 1].setAttribute('style', 'background-color:#fff');
+        } else if (i == listLableBanner.length - 1) {
+            listLableBanner[x].setAttribute('style', 'background-color:none');
+        } else {
+            listLableBanner[x].setAttribute('style', 'background-color:none');
         }
     }
 }

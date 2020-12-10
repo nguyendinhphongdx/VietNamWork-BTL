@@ -12,6 +12,10 @@
     display: block;
 }
 
+.row input[type='checkbox'] {
+    width: 15%;
+}
+
 .row input {
     width: 100%;
     padding: 5px 10px;
@@ -39,7 +43,7 @@ input#idisable {
 
 .row[id=expired] label,
 [id=disable] label {
-    width: 15%;
+    width: 30%;
 }
 
 .row input[type=submit] {
