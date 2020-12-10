@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietNamWorks</title>
+    <link rel="stylesheet" href="assets/front-end/css/main.css">
+    <link rel="stylesheet" href="assets/front-end/font/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/front-end/css/reponsive.css">
+    <script src="assets/front-end/js/tab-menu.js"></script>
+</head>
+
+<body onload="setup()">
+    <div class="wrapper">
+        <div class="header">
+            <div class="tab-menu" style="transform: translateX(-100%); transition-duration: 300ms;">
+                <div class="logo">
+                    <img src="assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="main-menu">
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Interviews</a></li>
+                        <li><a href="">Companies</a></li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">HR Insider</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-left">
+                <div class="bar" onclick="active_tab_menu()" id="button">
+                    <div class="icon-bar"><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="logo">
+                    <img src="assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="main-menu">
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Interviews</a></li>
+                        <li><a href="">Companies</a></li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">HR Insider</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="tools">
+                    <li>For Employee</li>
+                    <li>
+                        <div class="notification"><i class="fas fa-bell fa-1x"></i></div>
+                    </li>
+                    <li id="group-signIn">
+                        <div class="sign-in" onclick="clickSignIn()">
+                            <i class="fas fa-user"></i> <span id="username">Sign In</span>
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <div class="formSignIn" style="display: none;">
+                            <div class="title-signIn">Người Tìm Viêc Đăng Nhập</div>
+                            <button id="btnLogin"><a href="custumerLogin.html">Đăng Nhập</a></button>
+                            <div class="title-signIn">Người Tìm Viêc Đăng Ký</div>
+                            <button id="btnSignin"><a href="custumerRegestry.html">Đăng Ký</a></button>
+                            <p id="forgot">Bạn <a href="">Quên Tài Khoản/ Mật Khẩu ?</a></p>
+                        </div>
+                        <div class="formLogout" style="display: none;">
+                            <div class="title-signIn"> <a href="" class="manage">Quản Lý Tài Khoản</a></div>
+                            <div class="title-signIn"> <a href="" class="logout" onclick="logout()">Đăng Xuất</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="slides">
+                <div class="slider">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <div class="picture s1">
+                        <img src="assets/front-end/images/banner2.jpg" alt="" class="banner">
+                    </div>
+                    <div class="picture">
+                        <img src="assets/front-end/images/banner.jpg" alt="" class="banner">
+                    </div>
+                    <div class="picture">
+                        <img src="assets/front-end/images/banner3.jpg" alt="" class="banner">
+                    </div>
+                    <div class="picture">
+                        <img src="assets/front-end/images/banner4.jpg" alt="" class="banner">
+                    </div>
+                </div>
+                <div class="label-controll-banner">
+                    <label for="r1" class="lable-bar"></label>
+                    <label for="r2" class="lable-bar"></label>
+                    <label for="r3" class="lable-bar"></label>
+                    <label for="r4" class="lable-bar"></label>
+                </div>
+                <div class="group-search">
+                    <div class="title">
+                        Find Work for you
+                    </div>
+                    <div class="box-search">
+                        <div class="container-search">
+                            <div class="input-search">
+                                <span><i class="fas fa-search fa-1x"></i></span>
+                                <input type="text">
+                            </div>
+                            <button>Tìm Kiếm</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="container">
+                <link rel="stylesheet" type="text/css" href="assets/front-end/css/detailJob.css" />
+                <script src="assets/front-end/js/detailJob.js"></script>
+                <!-- start -->
+                <div class="notable-employer">
+                    <div class="swiper-container">
+                        <div class="picture">
+                            <img src="assets/front-end/images/banner.jpg" alt="">
+                        </div>
+                        <div class="info-company">
+                            <div class="frame">
+                                <div class="logo-company">
+                                    <img src="assets/front-end/images/bkav.png" alt="" width="70%">
+                                </div>
+                                <div class="content-company">
+                                    <div class="name-job">Marketing Team Leader</div>
+                                    <div class="slogan">Tập Đoàn BKAV - nơi chắp cánh ước mơ</div>
+                                    <div class="location">Đại điểm làm việc: Hà Nội</div>
+                                    <a href="https://"> Đăng nhập để xem lương</a>
+                                </div>
+                                <div class="up-cv">
+                                    <button>Nộp CV</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul class="menu-second">
+                        <li><a href="./ChitietCV.html">THÔNG TIN</a></li>
+                        <li><a href="./ChitietCT.html">CÔNG TY</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-6">
+                        <h2> CÁC PHÚC LỢI DÀNH CHO BẠN</h2>
+                        <div class="benefits">
+                            <div class="benefit-row">
+                                <img src="assets/front-end/images/doctor.png" width="30px" />
+                                <div>Khám sức khỏe định kì hàng năm</div>
+                            </div>
+                            <div class="benefit-row">
+                                <img src="assets/front-end/images/mortarboard.png" width="30px" />
+                                <div>Cơ hội đào tạo nội bộ và các chương trình public/inhouse</div>
+                            </div>
+                            <div class="benefit-row">
+                                <img src="assets/front-end/images/plane.png" width="30px" />
+                                <div>Du lịch hàng năm</div>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <h2>MÔ TẢ CÔNG VIỆC</h2>
+                            <div id="description">
+
+                            </div>
+                        </div>
+                        <div class="job-requirements">
+                            <h2> YÊU CẦU CÔNG VIỆC</h2>
+                            <div class="requirement">
+                                <h4> BẠN CẦN CÓ:</h4>
+                                <div id="Requirement">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-adress">
+                            <h2>ĐỊA ĐIỂM LÀM VIỆC</h2>
+                            <div class="adress-row">
+                                <img src="assets/front-end/images/location.png" width="30px" />
+                                <div> 219 Phố Trung Kính, Yên Hoà, Cầu Giấy, Hà Nội, Việt Nam</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+
+
+                </div>
+
+                <!-- end -->
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="assets/front-end/images/vnw_logo_white.png" alt="">
+                </div>
+                <div class="info-contact">
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Dành Cho Nhà Tuyển Dụng
+                        </div>
+                        <li>
+                            <a href="">Đăng Tin Tuyển Dụng</a>
+                        </li>
+                        <li>
+                            <a href="">Tìm Kiếm Hồ Sơ</a>
+                        </li>
+                        <li>
+                            <a href="">Giải Pháp Talent Solution</a>
+                        </li>
+                    </ul>
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Dành Cho Nhà Tuyển Dụng
+                        </div>
+                        <li>
+                            <a href="">Đăng Tin Tuyển Dụng</a>
+                        </li>
+                        <li>
+                            <a href="">Tìm Kiếm Hồ Sơ</a>
+                        </li>
+                        <li>
+                            <a href="">Giải Pháp Talent Solution</a>
+                        </li>
+                    </ul>
+                    <ul class="for-employ">
+                        <div class="tile">
+                            Việc Làm Theo Khu Vực
+                        </div>
+                        <li>
+                            <a href="">Hà Nội</a>
+                        </li>
+                        <li>
+                            <a href="">Hải Phòng</a>
+                        </li>
+                        <li>
+                            <a href="">Đà Nẵng</a>
+                        </li>
+                        <li>
+                            <a href="">Huế</a>
+                        </li>
+                        <li>
+                            <a href="">TP Hồ Chí Minh</a>
+                        </li>
+                    </ul>
+                    <div class="linked">
+                        <div class="title-link">Ứng dụng cho di động</div>
+                        <div class="linked-container">
+                            <div class="picture-linked">
+                                <a href=""><img src="assets/front-end/images/apple.png" alt=""></a>
+                            </div>
+                            <div class="picture-linked">
+                                <a href=""><img src="assets/front-end/images/android.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <div class="author">
+                    Design by (Nguyễn Đình Phong) - phongnguyendx@gmail.com
+                </div>
+                <ul class="cp-right">
+                    <li>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-instagram"></i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-google-plus-square"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-youtube-square"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
