@@ -428,6 +428,7 @@ input[name='r'] {
     display: flex;
     flex-direction: column;
     align-content: center;
+    cursor:pointer;
 }
 
 .company .box-company {
@@ -512,6 +513,7 @@ input[name='r'] {
     font-weight: 700;
     color: #363636;
     font-size: 1.5vw;
+    cursor:pointer;
 }
 
 .info-job .address {

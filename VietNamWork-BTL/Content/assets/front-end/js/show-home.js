@@ -62,14 +62,19 @@ function setInnerHTML(Obj, list, start, end) {
         stringHTML += '<li><div class="row"> <div class="container-row"><div class="avatar">' +
             '<img src="/Content/assets/front-end/images/' + list[i].image + '" alt="">' +
             ' </div> <div class="info-job">' +
-            '<div class="name">' + list[i].name + '</div>' +
+            '<div class="name" onclick="detailJob(this)">' + list[i].name + '</div>' +
             ' <div class="address">' + list[i].address + '</div>' +
             '</div>' +
             '<div class="status">' + list[i].status + ' </div>  </div>    </div>    </li>';
     }
     Obj.innerHTML = stringHTML;
 }
-
+function detailJob(t) {
+    var nameDetailJob = t.innerText;
+    console.log(nameDetailJob);
+    localStorage.setItem('nameDetailJob', JSON.stringify(nameDetailJob));
+    window.location = "detailJob";
+}
 function showBanner() {
     var banner = document.getElementsByClassName('banner');
     //var index = Math.floor(Math.random() * listBanner.length);
@@ -103,9 +108,9 @@ function showFeartureCompany() {
     var length = listFeartureCompany.length;
     var stringUL = "";
     for (var i = 0; i < length; i++) {
-        stringUL += '<li><div class="company">' +
+        stringUL += '<li><div class="company" onclick="detailCompany(this)">' +
             '<div class="box-company">' +
-            '<div class="picture">' +
+            '<div class="picture" >' +
             '<img src="/Content/assets/front-end/images/' + listFeartureCompany[i].image + '" alt="">' +
             ' </div>  </div>' +
             '<div class="name">' +
@@ -114,7 +119,12 @@ function showFeartureCompany() {
     }
     ulFearture.innerHTML = stringUL;
 }
-
+function detailCompany(t) {
+    var nameCompanyDetail = t.innerText;
+    console.log(nameCompanyDetail);
+    localStorage.setItem('nameDetailCompany', JSON.stringify(nameCompanyDetail));
+    window.location = "detailCompany";
+}
 function setBanner() {
     listBanner.push('banner');
     listBanner.push('banner2');

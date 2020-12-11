@@ -2,13 +2,18 @@
 //const currentCustumer = JSON.parse(localStorage.getItem('currentCustumer'));
 var btn,
     fallBack, btnClose;
-
+let nameDetailJob = JSON.parse(localStorage.getItem('nameDetailJob'));
+var listJob = JSON.parse(localStorage.getItem('listJobs'));
+var detailJob;
 function setup() {
     checkInfoCustumer();
     setBanner();
     showBanner();
     splip_description();
     splip_requirement();
+    fillterDetailJob(nameDetailJob, listJob);
+    console.log(detailJob);
+    showDetailJob(detailJob);
     checkStatus();
     btn = document.getElementById('btnApply');
     fallBack = document.getElementsByClassName('fallBack')[0];
@@ -22,7 +27,21 @@ function setup() {
         }
     }
 }
-
+function fillterDetailJob(key, array) {
+    var length = array.length;
+    for (var i = 0; i < length; i++) {
+        if (array[i].name == key) {
+            detailJob = array[i]; break;
+        }
+    }
+}
+function showDetailJob(obj) {
+    document.getElementById('picture-job').setAttribute('src', '/Content/assets/front-end/images/' + obj.image);
+    document.getElementById('nameJob').innerHTML = 'Tên Công Việc : ' + obj.name;
+    document.getElementById('slogan').innerHTML = 'TẬP ĐOÀN ' + obj.company+' - NƠI CHẮP CÁNH ƯỚC MƠ : ';
+    document.getElementById('address').innerHTML = 'Địa điểm làm việc : '+obj.address;
+    document.getElementById('salary').innerHTML = `Mức Lương Trung Bình : ${obj.salary} $`;
+}
 function showBanner() {
     var banner = document.getElementsByClassName('banner');
     // var index = Math.floor(Math.random() * listBanner.length);
@@ -171,7 +190,7 @@ function checkStatus() {
 function showPopup() {
     if (localStorage.getItem('currentCustumer') == null) {
         alert('Hãy đăng nhập!');
-        fallBack.style.display = 'flex';
+        //fallBack.style.display = 'none';
     } else {
         fallBack.style.display = 'flex';
     }
