@@ -17,7 +17,7 @@ namespace VietNamWork_BTL.Core
             HttpPostedFile file = (HttpPostedFile)Request.Files.Get(0);
             string PathSystem = Server.MapPath("CVs\\").ToString();
            // Response.Write(Path.GetDirectoryName(Server.MapPath("CVS")));
-            if (Directory.Exists(PathSystem) == true) //  đã tồn tại folder CVs
+            if (Directory.Exists(PathSystem) == true)
             {
                 Response.Write("đã tồn tại :" + PathSystem  + "<br/>");
                 Directory.CreateDirectory(PathSystem);
@@ -46,10 +46,14 @@ namespace VietNamWork_BTL.Core
             Response.Write("status"+success + "<br/>");
             HttpCookie cookie = new HttpCookie("status");
             cookie.Value = success.ToString();
+           // DateTime timeout = new DateTime();
+            //cookie.Expires = new DateTime(timeout.Year,timeout.Month,timeout.Day,timeout.Hour,timeout.Minute,timeout.Second+10);
             Response.Cookies.Remove("status");
             Response.Cookies.Add(cookie);
+            // Response.Cookies["status"].Value = "success";
             //Session.Add("status",success);
-            Response.Redirect("~/Custumer/Apply");
+            string pageCurrent = HttpContext.Current.Request.Url.AbsolutePath;
+            Response.Redirect("~/Custumer/detailJob");
         }
     }
 }

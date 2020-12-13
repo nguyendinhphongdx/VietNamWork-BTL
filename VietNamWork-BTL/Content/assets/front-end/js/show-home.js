@@ -136,6 +136,7 @@ function setBanner() {
 function setFeatureCompany() {
     var list = [];
     list = getListFromLS("listCompany");
+    console.log(list);
     listFeartureCompany = list.getNElement(7);
     console.log(listFeartureCompany);
 }
@@ -160,7 +161,9 @@ Array.prototype.getNElement = function (n) {
         for (var i = 0; i < n; i++) {
             var index = Math.floor(Math.random() * arrlength);
             var element = {};
-            list.push(this[index]);
+            element = arrCopy[index];
+            console.log(element);
+            list.push(element);
         }
     }
     return list;
@@ -205,4 +208,25 @@ function clickSignIn() {
         }
     }
 
+}
+function search() {
+    var key = document.getElementById('key-search').value;
+    if (key == '') {
+        alert('Nhập từ khóa để tìm kiếm');
+    } else {
+        var listjob = getListFromLS('listJobs');
+        var listResult = [];
+        var length = listjob.length;
+        for (var i = 0; i < length;i++) {
+            if (listjob[i].name.includes(key) || listjob[i].company.includes(key)) {
+                listResult.push(listjob[i]);
+            }
+        }
+        if (listResult.length == 0) {
+            alert('Không Tìm Thấy Công Việc Nào Phù Hợp!');
+        } else {
+            localStorage.setItem('jobSearch',JSON.stringify( listResult));
+            window.location = '/Custumer/Jobs_Search';
+        }
+    }
 }

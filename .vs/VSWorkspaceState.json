@@ -2,15 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\VietNamWork-BTL",
-    "\\VietNamWork-BTL\\Controllers",
-    "\\VietNamWork-BTL\\obj",
-    "\\VietNamWork-BTL\\obj\\Debug",
+    "\\VietNamWork-BTL\\Content",
+    "\\VietNamWork-BTL\\Content\\assets",
+    "\\VietNamWork-BTL\\Content\\assets\\front-end",
+    "\\VietNamWork-BTL\\Content\\assets\\front-end\\js",
     "\\VietNamWork-BTL\\Upload",
     "\\VietNamWork-BTL\\Upload\\CVs",
     "\\VietNamWork-BTL\\Views",
     "\\VietNamWork-BTL\\Views\\Admin",
     "\\VietNamWork-BTL\\Views\\Custumer"
   ],
-  "SelectedNode": "\\VietNamWork-BTL\\Upload\\CVs\\City-Buildings-Business-PowerPoint-Template.pptx",
+  "SelectedNode": "\\VietNamWork-BTL\\Upload\\CVs",
   "PreviewInSolutionExplorer": false
 }

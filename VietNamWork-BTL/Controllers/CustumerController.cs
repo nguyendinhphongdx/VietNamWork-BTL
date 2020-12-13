@@ -29,6 +29,10 @@ namespace VietNamWork_BTL.Controllers
         {
             return View();
         }
+        public ActionResult Companies()
+        {
+            return View();
+        }
         public ActionResult detailCompany()
         {
             return View();
@@ -36,7 +40,20 @@ namespace VietNamWork_BTL.Controllers
         public ActionResult detailJob()
         {
             return View();
+
         }
-        
+        public ActionResult interviews()
+        {
+            return View();
+        }
+        public ActionResult Jobs_Search()
+        {
+            return View();
+        }
+        public ActionResult Test()
+        {
+            return View();
+        }
+
     }
 }

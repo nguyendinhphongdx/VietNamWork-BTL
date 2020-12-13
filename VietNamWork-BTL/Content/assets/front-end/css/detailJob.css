@@ -33,36 +33,36 @@
     align-content: space-around;
 }
 
-    .popup h2 {
-        width: 100%;
-        color: rgb(44, 61, 61);
-    }
+.popup h2 {
+    width: 100%;
+    color: rgb(44, 61, 61);
+}
 
-    .popup .form-data {
-        width: 100%;
-        border: 1px solid;
-        padding: 15px 20px;
-    }
+.popup .form-data {
+    width: 100%;
+    border: 1px solid;
+    padding: 15px 20px;
+}
 
-        .popup .form-data .row {
-            margin: 10px 0px;
-            width: 100%;
-        }
+.popup .form-data .row {
+    margin: 10px 0px;
+    width: 100%;
+}
 
-            .popup .form-data .row label {
-                display: inline-block;
-                width: 35%;
-                text-align: right;
-            }
+.popup .form-data .row label {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+}
 
-            .popup .form-data .row input:not(.btn) {
-                padding: 3px 5px;
-                width: 50%;
-            }
+.popup .form-data .row input:not(.btn) {
+    padding: 3px 5px;
+    width: 50%;
+}
 
-            .popup .form-data .row:last-child {
-                text-align: right;
-            }
+.popup .form-data .row:last-child {
+    text-align: right;
+}
 
 .btn {
     width: 120px;

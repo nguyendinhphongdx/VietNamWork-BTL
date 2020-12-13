@@ -41,6 +41,7 @@ function showDetailJob(obj) {
     document.getElementById('slogan').innerHTML = 'TẬP ĐOÀN ' + obj.company+' - NƠI CHẮP CÁNH ƯỚC MƠ : ';
     document.getElementById('address').innerHTML = 'Địa điểm làm việc : '+obj.address;
     document.getElementById('salary').innerHTML = `Mức Lương Trung Bình : ${obj.salary} $`;
+    splip_description();
 }
 function showBanner() {
     var banner = document.getElementsByClassName('banner');
@@ -154,9 +155,14 @@ function changeLabelBanner(i) {
 
 function splip_description() {
     console.log('running...');
-    var str = "- Tham gia vào các dự án phần mềm với các đối tác hàng đầu Nhật Bản." + '<br/>' + "- Lập trình các ứng dụng iOS, Android." + '<br/>' + "- Tham gia vào quá trình thiết kế, review source code";
-    res = str.split(".");
-    document.getElementById("description").innerHTML = res;
+    //var str = "- Tham gia vào các dự án phần mềm với các đối tác hàng đầu Nhật Bản." + '<br/>' + "- Lập trình các ứng dụng iOS, Android." + '<br/>' + "- Tham gia vào quá trình thiết kế, review source code";
+    //res = str.split(".");
+    var str = detailJob.description + "-AGAFASDASDASDASDASDSADSASAASDS";
+    var res = str.split("-");
+    var stringHtml = res.map(function (des) {
+        return des+"<br/>";
+    });
+    document.getElementById("description").innerHTML = stringHtml;
 
 }
 
@@ -171,13 +177,21 @@ function splip_requirement() {
     document.getElementById("Requirement").innerHTML = res;
 }
 function checkStatus() {
+    console.log(document.cookie);
     if (document.cookie != '') {
-        alert('Đã có Cookie Nộp Đơn !');
-        document.cookie = 'status=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    } else {
-        alert('Chưa có Cookie Nộp Đơn !');
-        document.cookie = 'status=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    }
+        alert('Nộp Đơn Thành Công !');
+        document.cookie = `status=;expires = Thu, 01 Jan 1970 00:00:00 GMT`;
+    } 
+    //var timeout = new Date();
+    //timeout.setSeconds(timeout.getSeconds() + 3);
+    //console.log(timeout);
+    document.cookie = `status= ;expires = Thu, 01 Jan 1970 00:00:00 GMT`;
+    setInterval(function () {
+        console.log(document.cookie);
+    },1000);
+    //document.cookie = `status=;expires=${timeout.getUTCDate}`;
+    //console.log(timeout);
+    //console.log(document.cookie);
     //console.log(sessionStorage.getItem("status"));
     //if (sessionStorage.getItem("status") == true) {
     //    alert('Đã Nộp Đơn !');
@@ -198,4 +212,25 @@ function showPopup() {
 
 function hidePopup() {
     fallBack.style.display = 'none';
+}
+function search() {
+    var key = document.getElementById('key-search').value;
+    if (key == '') {
+        alert('Nhập từ khóa để tìm kiếm');
+    } else {
+        var listjob = getListFromLS('listJobs');
+        var listResult = [];
+        var length = listjob.length;
+        for (var i = 0; i < length; i++) {
+            if (listjob[i].name.includes(key) || listjob[i].company.includes(key)) {
+                listResult.push(listjob[i]);
+            }
+        }
+        if (listResult.length == 0) {
+            alert('Không Tìm Thấy Công Việc Nào Phù Hợp!');
+        } else {
+            localStorage.setItem('jobSearch', JSON.stringify(listResult));
+            window.location = '/Custumer/Jobs_Search';
+        }
+    }
 }

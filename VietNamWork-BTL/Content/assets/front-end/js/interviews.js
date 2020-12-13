@@ -1,24 +1,48 @@
 ﻿var listBanner = [];
-//const currentCustumer = JSON.parse(localStorage.getItem('currentCustumer'));
-let nameDetailCompany = JSON.parse(localStorage.getItem('nameDetailCompany'));
-var listCompany = JSON.parse(localStorage.getItem('listCompany'));
-var detailCompany;
+const currentCustumer = JSON.parse(localStorage.getItem('currentCustumer'));
+var listQuestion = getListFromLS('listQuestion');
+var listAdvertise = [];
+
 function setup() {
     checkInfoCustumer();
     setBanner();
     showBanner();
-    showInfomationDetailCompany(nameDetailCompany, listCompany);
-    console.log(detailCompany);
-    split_box(detailCompany);
+    showData();
+    setAdvertise();
+    changeAdvertise(5000);
 }
-function showInfomationDetailCompany(key, array) {
-    var length = array.length;
-    for (var i = 0; i < length;i++) {
-        if (array[i].name == nameDetailCompany) {
-            detailCompany = array[i]; break;
+
+function changeAdvertise(x) {
+    var adver = document.getElementById('adver');
+    var i = 0;
+    setInterval(function () {
+        if (i > listAdvertise.length) {
+            i = 0;
         }
-    }
+        adver.setAttribute('src', `/Content/assets/front-end/images/${listAdvertise[i]}.jpg`);
+        i++;
+    }, x);
 }
+
+function setAdvertise() {
+    listAdvertise.push('ad1', 'ad2', 'ad3', 'ad4');
+    console.log(listAdvertise);
+}
+
+function showData() {
+    var taglistQuestion = document.getElementById('list-question');
+    taglistQuestion.innerHTML = '';
+    var length = listQuestion.length;
+    var stringHtml = '';
+    for (var i = 0; i < length; i++) {
+        stringHtml += `<div class="question"> <div class="title">${i}. ${listQuestion[i].title} </div>` +
+            `<div class="answer"> ${listQuestion[i].answer}</div>` +
+            ` <div class="resourse">  <h3>Nguồn Cung Cấp : Tập Thể</h3> <div class="picture-resourse">` +
+            `  <img src="/Content/assets/front-end/images/${listQuestion[i].image}" alt=""></div></div> <hr> </div>`;
+    }
+    taglistQuestion.innerHTML = stringHtml;
+}
+
 function showBanner() {
     var banner = document.getElementsByClassName('banner');
     // var index = Math.floor(Math.random() * listBanner.length);
@@ -63,6 +87,8 @@ Array.prototype.getNElement = function (n) {
     return list;
 }
 
+
+
 function checkInfoCustumer() {
     console.log(currentCustumer);
     if (currentCustumer == null || currentCustumer.username == '') {
@@ -105,6 +131,7 @@ function changeBanner() {
     console.log('changing...');
     var listRadioBanner = document.getElementsByName('r');
     for (var i = 0; i < listRadioBanner.length; i++) {
+        //console.log(`Radio ${i}:${listRadioBanner[i].checked}`);
         if (listRadioBanner[i].checked == true && i != listRadioBanner.length - 1) { // duyệt 4 radio và set checked cho radio kế
             listRadioBanner[i + 1].checked = true;
             // console.log(i);
@@ -119,6 +146,7 @@ function changeBanner() {
 function changeLabelBanner(i) {
     var listLableBanner = document.getElementsByClassName('lable-bar');
     for (var x = 0; x < listLableBanner.length; x++) {
+        // console.log(`x: ${x}  i: ${i}`);
         if (x == i && x != listLableBanner.length - 1) {
             listLableBanner[x + 1].setAttribute('style', 'background-color:#fff');
         } else if (i == listLableBanner.length - 1) {
@@ -127,40 +155,6 @@ function changeLabelBanner(i) {
             listLableBanner[x].setAttribute('style', 'background-color:none');
         }
     }
-}
-
-
-
-
-function split_box(object) {
-    var str = '';
-    document.getElementById('pictrueCompany').setAttribute('src', '/Content/assets/front-end/images/' + object.image);
-    document.getElementById('slogan').innerHTML = `Công Ty  ${object.name} - Chào Mừng Bạn `;
-    document.getElementById('address').innerHTML = `Địa diểm làm việc :  ${object.address} `;
-    if (currentCustumer != null) {
-        document.getElementById('salary').innerHTML = 'Lương trung bình : 800$ - 3000$';
-    } else {
-        document.getElementById('salary').innerHTML = 'Đăng nhập để xem lương trung binh.';
-    }
-   // console.log(object);
-    if (typeof(object)=='function') {
-        str = "Bkav là Tập đoàn công nghệ hoạt động trong các lĩnh vực an ninh mạng, phần mềm, chính phủ điện tử, nhà sản xuất smartphone và các thiết bị điện tử thông minh, Bkav là 1 trong 10 thương hiệu Nổi tiếng nhất Việt Nam do Hội Sở hữu trí tuệ Việt Nam bình chọn, nằm trong Top 10 Dịch vụ hoàn hảo do Hội Tiêu chuẩn Bảo vệ Người tiêu dùng Việt Nam bình chọn" +
-            '<br/>' + '<br/>' + "*Tầm nhìn (Vision): New view with you – Vươn tới tầm cao mới" + '<br/>' + "Vươn tới thế giới mới, tầm cao mới – Nơi mỗi cá nhân, tập thể tại Hybrid Technologies ngày càng trở nên tuyệt vời hơn thông qua việc cùng nhau phát triển và nỗ lực hiện thực hóa giấc mơ chung" +
-            '<br/>' + "* Sứ mệnh (Mission): Luôn tự phát triển & Đồng hành cùng thành công của khách hàng" + '<br/>' + "Trở thành một công ty công nghệ toàn cầu, một đối tác chuyên nghiệp, tin cậy thông qua việc luôn tự phát triển, song song với việc đồng hành cùng sự phát triển và thành công của khách hàng" +
-            '<br/>' + "* Giá trị cốt lõi (Core Values):" + '<br/>' + "- Giao tiếp (Communication): Chủ động đối thoại không ngần ngại." + '<br/>' +
-            "- Giải pháp (Solution): Đưa ra giải pháp khả thi nhất, phù hợp với mọi nhu cầu, hoàn cảnh." + '<br/>' + "- Mối quan hệ (Relation): Xây dựng mối quan hệ đồng hành, phát triển bền vững và đáng tin cậy" + '<br/>' + '<br/>' +
-            "THAM GIA CÙNG CHÚNG TÔI NGAY !";
-    } else {
-        str += '<br/> *** <b>Gioi Thiệu :</b><br/>' +object.introduction+'<br/>';
-        str += '<br/> *** <b>Tầm Nhìn Chiến Lược :</b><br/>' + object.vision + '<br/>';
-        str += '<br/> *** <b>Sứ mệnh (Mission):</b><br/>' + object.mission + '<br/>';
-        str += "<br/> *** <b>Giá trị cốt lõi (Core Values):</b>" + '<br/>' + "- Giao tiếp (Communication): Chủ động đối thoại không ngần ngại." + '<br/>' +
-            " <br/>*** <b>Giải pháp (Solution)</b>:<br/> Đưa ra giải pháp khả thi nhất, phù hợp với mọi nhu cầu, hoàn cảnh." + '<br/>' + "- Mối quan hệ (Relation): Xây dựng mối quan hệ đồng hành, phát triển bền vững và đáng tin cậy" + '<br/>' + '<br/>' +
-            "THAM GIA CÙNG CHÚNG TÔI NGAY !";
-    }
-    res = str.split(".");
-    console.log(res);
-    document.getElementById("box").innerHTML = str;
 }
 function search() {
     var key = document.getElementById('key-search').value;

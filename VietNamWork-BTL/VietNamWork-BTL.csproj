@@ -122,6 +122,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustumerController.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Upload\UploadCV.aspx.cs">
       <DependentUpon>UploadCV.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +161,8 @@
     <Content Include="Content\assets\back-end\images\Nec.png" />
     <Content Include="Content\assets\back-end\images\Neo.png" />
     <Content Include="Content\assets\back-end\images\VinD.png" />
+    <Content Include="Content\assets\back-end\images\Vinhome.png" />
+    <Content Include="Content\assets\back-end\images\VNPT_Logo.png" />
     <Content Include="Content\assets\back-end\js\add-company.js" />
     <Content Include="Content\assets\back-end\js\add-jobs.js" />
     <Content Include="Content\assets\back-end\js\add-question.js" />
@@ -170,17 +179,27 @@
     <Content Include="Content\assets\back-end\js\show-question.js" />
     <Content Include="Content\assets\back-end\js\show-user.js" />
     <Content Include="Content\assets\front-end\css\applyCV.css" />
+    <Content Include="Content\assets\front-end\css\companies.css" />
     <Content Include="Content\assets\front-end\css\detailCompany.css" />
     <Content Include="Content\assets\front-end\css\detailJob.css" />
+    <Content Include="Content\assets\front-end\css\interviews.css" />
+    <Content Include="Content\assets\front-end\css\jobs.css" />
+    <Content Include="Content\assets\front-end\images\ad1.jpg" />
+    <Content Include="Content\assets\front-end\images\ad2.jpg" />
+    <Content Include="Content\assets\front-end\images\ad3.jpg" />
+    <Content Include="Content\assets\front-end\images\ad4.jpg" />
     <Content Include="Content\assets\front-end\images\daesun.png" />
     <Content Include="Content\assets\front-end\images\doctor.png" />
     <Content Include="Content\assets\front-end\images\hybird.png" />
+    <Content Include="Content\assets\front-end\images\iconweb.png" />
     <Content Include="Content\assets\front-end\images\location.png" />
+    <Content Include="Content\assets\front-end\images\mailbox.png" />
     <Content Include="Content\assets\front-end\images\mortarboard.png" />
     <Content Include="Content\assets\front-end\images\Nec.png" />
     <Content Include="Content\assets\front-end\images\Neo.png" />
     <Content Include="Content\assets\front-end\images\plane.png" />
     <Content Include="Content\assets\front-end\images\VinD.png" />
+    <Content Include="Content\assets\front-end\images\Vinhome.png" />
     <Content Include="Content\assets\front-end\js\apply.js" />
     <Content Include="Content\assets\front-end\css\LoginAndRegestry.css" />
     <Content Include="Content\assets\front-end\css\main.css" />
@@ -213,12 +232,17 @@
     <Content Include="Content\assets\front-end\images\Untitled-design-45-1080x675.png" />
     <Content Include="Content\assets\front-end\images\VNPT_Logo.png" />
     <Content Include="Content\assets\front-end\images\vnw_logo_white.png" />
+    <Content Include="Content\assets\front-end\js\companies.js" />
     <Content Include="Content\assets\front-end\js\custumerLogin.js" />
     <Content Include="Content\assets\front-end\js\custumerRegestry.js" />
     <Content Include="Content\assets\front-end\js\detailCompany.js" />
     <Content Include="Content\assets\front-end\js\detailJob.js" />
+    <Content Include="Content\assets\front-end\js\interviews.js" />
+    <Content Include="Content\assets\front-end\js\jobs.js" />
+    <Content Include="Content\assets\front-end\js\jobs_search.js" />
     <Content Include="Content\assets\front-end\js\show-home.js" />
     <Content Include="Content\assets\front-end\js\tab-menu.js" />
+    <Content Include="Test.aspx" />
     <Content Include="Upload\UploadCV.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -304,10 +328,13 @@
     <Content Include="Views\Admin\edit_company.cshtml" />
     <Content Include="Views\Admin\edit_question.cshtml" />
     <Content Include="Views\Custumer\Apply.cshtml" />
-    <Content Include="Views\Custumer\Jobs.cshtml" />
     <Content Include="Views\Custumer\detailCompany.cshtml" />
     <Content Include="Views\Layout\_homeLayoutWithBanner.cshtml" />
     <Content Include="Views\Custumer\detailJob.cshtml" />
+    <Content Include="Views\Custumer\Jobs.cshtml" />
+    <Content Include="Views\Custumer\Companies.cshtml" />
+    <Content Include="Views\Custumer\interviews.cshtml" />
+    <Content Include="Views\Custumer\Jobs_Search.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

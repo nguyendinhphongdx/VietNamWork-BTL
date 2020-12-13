@@ -8,6 +8,7 @@
     <link href="~/Content/assets/front-end/css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Content/assets/front-end/font/font-awesome/css/all.css">
     <link rel="stylesheet" href="~/Content/assets/front-end/css/reponsive.css">
+    <link rel="icon" href="~/Content/assets/front-end/images/iconweb.png" type="image/gif" sizes="16x16">
     <script src="~/Content/assets/front-end/js/tab-menu.js"></script>
     <script src="~/Content/assets/front-end/js/show-home.js"></script>
 </head>
@@ -21,9 +22,9 @@
                 </div>
                 <div class="menu">
                     <ul class="main-menu">
-                        <li><a href="">Jobs</a></li>
-                        <li><a href="">Interviews</a></li>
-                        <li><a href="">Companies</a></li>
+                        <li>@Html.ActionLink("Jobs", "Jobs", "Custumer")</li>
+                        <li>@Html.ActionLink("Interviews", "Interviews", "Custumer")</li>
+                        <li>@Html.ActionLink("Companies", "Companies", "Custumer")</li>
                         <li>
                             <a href="">Courses</a>
                         </li>
@@ -42,9 +43,9 @@
                 </div>
                 <div class="menu">
                     <ul class="main-menu">
-                        <li><a href="">Jobs</a></li>
-                        <li><a href="">Interviews</a></li>
-                        <li><a href="">Companies</a></li>
+                        <li>@Html.ActionLink("Jobs", "Jobs", "Custumer")</li>
+                        <li>@Html.ActionLink("Interviews", "Interviews", "Custumer")</li>
+                        <li>@Html.ActionLink("Companies", "Companies", "Custumer")</li>
                         <li>
                             <a href="">Courses</a>
                         </li>
@@ -115,11 +116,10 @@
                         <div class="container-search">
                             <div class="input-search">
                                 <span><i class="fas fa-search fa-1x"></i></span>
-                                <input type="text">
+                                <input type="text" id="key-search">
                             </div>
-                            <button>Tìm Kiếm</button>
+                            <button onclick="search()">Tìm Kiếm</button>
                         </div>
-
                     </div>
                 </div>
             </div>
