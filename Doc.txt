@@ -1,0 +1,49 @@
+1. String
+	.indexOf("key"); // -1 if not find
+	.split(" "); // convert string to array with elements
+	.includes("key"); // check exists in string
+	.slice(start,end); // cut string from start to end position
+	.replace(/key/,"newWord"); // replace
+2. Number 
+	.toFix(); 
+	new Intl.NumberFormat().format(value);
+3. Array
+	.join("")// convert arrat to string with key 
+	.splice(index,num) // remove num element from index position
+	.splice(index,0,newE) // insert newE into index
+4. For
+	for of : for each element
+	for in : for property of object
+5. Cookie
+	document.cookie = "key=value,expires=timeout";
+6. Server
+	.MapPath() // return 
+  Response.Cookies["status"].Value = "true" + enter;
+            Response.Write("Server.MapPath: "+Server.MapPath("") + enter);
+            Response.Write("Request.HttpMethod: " + Request.HttpMethod + enter);
+            Response.Write("Request.ContentType: " + Request.ContentType + enter);
+            Response.Write("Request.RawUrl: " + Request.RawUrl + enter);
+            Response.Write("Request.Path: " + Request.Path + enter);
+            Response.Write("Request.ApplicationPath: " + Request.ApplicationPath + enter);
+          //  Response.Write("Request.Cookies: " + Request.Cookies["status"].Value + enter);
+            Response.Write("Response.Cookies: " + Response.Cookies["status"].Value + enter);
+            Response.Write("Request.CurrentExecutionFilePath: " + Request.CurrentExecutionFilePath + enter);
+            Response.Write("Request.MapPath: " + Request.MapPath("") + enter);
+            Response.Write("Server.UrlEncode: " + Server.UrlEncode("") + enter);
+            Response.Write("Server.MachineName: " + Server.MachineName + enter);
+            Response.Write("Server.Url: " + Request.Url + enter);
+            Response.Write("Server.UserHostAddress: " + Request.UserHostAddress + enter);
+Server.MapPath: E:\Project ASP.NET\WebApplication1\WebApplication1
+Request.HttpMethod: POST
+Request.ContentType: application/x-www-form-urlencoded
+Request.RawUrl: /Xuly.aspx
+Request.Path: /Xuly.aspx
+Request.ApplicationPath: /
+Response.Cookies: true
+
+Request.CurrentExecutionFilePath: /Xuly.aspx
+Request.MapPath: E:\Project ASP.NET\WebApplication1\WebApplication1
+Server.UrlEncode:
+Server.MachineName: DESKTOP-RTQ2N2T
+Server.Url: http://localhost:58061/Xuly.aspx
+Server.UserHostAddress: 127.0.0.1
